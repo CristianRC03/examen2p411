@@ -16,7 +16,6 @@ class LoginController: NSObject {
     
     func addUser(user: User){
         users.append(user)
-        print(user.age)
     }
     
     func login(email:String, password:String) -> User? {
@@ -32,7 +31,6 @@ class LoginController: NSObject {
         for i in 0..<users.count {
             if users[i].id == userActualizar.id {
                 users[i] = userActualizar
-                print("usuario actualizado con exito")
                 return
             }
         }

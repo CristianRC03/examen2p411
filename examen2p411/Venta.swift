@@ -13,8 +13,8 @@ class Venta: NSObject {
     @objc dynamic var product: Producto
     @objc dynamic var quantity: Int
     @objc dynamic var subtotal: Double
-    @objc dynamic var iva: Double = 0.16
-    @objc dynamic var total: Double
+    @objc dynamic var iva: Double { return subtotal * 0.16}
+    @objc dynamic var total: Double { return subtotal + iva}
     
     init(id: Int, client: User, product: Producto, quantity: Int, subtotal: Double) {
         self.id = id
@@ -22,7 +22,5 @@ class Venta: NSObject {
         self.product = product
         self.quantity = quantity
         self.subtotal = subtotal
-        self.iva = subtotal * self.iva
-        self.total = subtotal + self.iva
     }
 }

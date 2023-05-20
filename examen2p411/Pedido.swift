@@ -10,9 +10,11 @@ import Cocoa
 class Pedido: NSObject {
     @objc dynamic var id: Int
     @objc dynamic var product: Producto
+    @objc dynamic var total: Double
     
-    init(id: Int, product: Producto) {
+    init(id: Int, product: Producto, total: Double) {
         self.id = id
         self.product = product
+        self.total = total
     }
 }

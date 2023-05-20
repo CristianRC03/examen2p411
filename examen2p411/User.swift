@@ -9,7 +9,7 @@ import Cocoa
 
 class User: NSObject {
     @objc dynamic let id: Int
-    @objc dynamic var nombre: String
+    @objc dynamic var name: String
     @objc dynamic var firstName: String
     @objc dynamic var lastName: String
     @objc dynamic var email: String
@@ -22,9 +22,9 @@ class User: NSObject {
     }
     @objc dynamic var role: Int
 
-    init(id: Int, nombre: String, firstName: String, lastName: String, email: String, password: String, birthdate: Date, role: Int) {
+    init(id: Int, name: String, firstName: String, lastName: String, email: String, password: String, birthdate: Date, role: Int) {
         self.id = id
-        self.nombre = nombre
+        self.name = name
         self.firstName = firstName
         self.lastName = lastName
         self.email = email

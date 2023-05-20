@@ -15,9 +15,8 @@ class Producto: NSObject {
     @objc dynamic var price: Double
     @objc dynamic var cost: Double
     @objc dynamic var category: String
-    @objc dynamic var quantity: Int
     
-    init(id: Int, name: String, description: String, unit: String, price: Double, cost: Double, category: String, quantity: Int) {
+    init(id: Int, name: String, description: String, unit: String, price: Double, cost: Double, category: String) {
         self.id = id
         self.name = name
         self.descripcion = description
@@ -25,6 +24,5 @@ class Producto: NSObject {
         self.price = price
         self.cost = cost
         self.category = category
-        self.quantity = quantity
     }
 }
