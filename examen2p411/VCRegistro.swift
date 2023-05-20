@@ -24,7 +24,7 @@ class VCRegistro: NSViewController {
     }
     
     @IBAction func btnCrearClicked(_ sender: NSButton) {
-        loginController.addUser(user: User(id: 1, firstName: "Romero", lastName: "Camacho", email: "cris@hotmail.com", password: "123456", birthdate: dtpNacimiento.dateValue, role: 1))
+        loginController.addUser(user: User(loginController.user.count + 1, name: txtNombre.stringValue, firstName: "Romero", lastName: "Camacho", email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: 1))
     }
     
 }
