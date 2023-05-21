@@ -21,6 +21,7 @@
 		AFD564362A19B80700972D51 /* exito.gif in Resources */ = {isa = PBXBuildFile; fileRef = AFD564352A19B80700972D51 /* exito.gif */; };
 		AFD564382A19F43700972D51 /* CompraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564372A19F43700972D51 /* CompraController.swift */; };
 		AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564392A19F54000972D51 /* ProductoController.swift */; };
+		AFD5643C2A19F95000972D51 /* VentaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5643B2A19F95000972D51 /* VentaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AFD564352A19B80700972D51 /* exito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = exito.gif; path = ../../../../Downloads/exito.gif; sourceTree = "<group>"; };
 		AFD564372A19F43700972D51 /* CompraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraController.swift; sourceTree = "<group>"; };
 		AFD564392A19F54000972D51 /* ProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoController.swift; sourceTree = "<group>"; };
+		AFD5643B2A19F95000972D51 /* VentaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				AF8DBAC42A12D78100FB4AD5 /* Compra.swift */,
 				AFD564372A19F43700972D51 /* CompraController.swift */,
 				AF8DBACA2A1329E800FB4AD5 /* Venta.swift */,
+				AFD5643B2A19F95000972D51 /* VentaController.swift */,
 				AF8DBACC2A132E2F00FB4AD5 /* Pedido.swift */,
 				AF8DBABA2A12D30400FB4AD5 /* examen2p411.entitlements */,
 				AFD564352A19B80700972D51 /* exito.gif */,
@@ -172,6 +175,7 @@
 				AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */,
 				AF8DBAB22A12D30100FB4AD5 /* AppDelegate.swift in Sources */,
 				AF8DBAC12A12D55800FB4AD5 /* User.swift in Sources */,
+				AFD5643C2A19F95000972D51 /* VentaController.swift in Sources */,
 				AF8DBAC92A12DD6A00FB4AD5 /* VCRegistro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
