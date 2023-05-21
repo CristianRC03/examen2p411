@@ -20,6 +20,7 @@
 		AF8DBACF2A133B8700FB4AD5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */; };
 		AFD564362A19B80700972D51 /* exito.gif in Resources */ = {isa = PBXBuildFile; fileRef = AFD564352A19B80700972D51 /* exito.gif */; };
 		AFD564382A19F43700972D51 /* CompraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564372A19F43700972D51 /* CompraController.swift */; };
+		AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564392A19F54000972D51 /* ProductoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AFD564352A19B80700972D51 /* exito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = exito.gif; path = ../../../../Downloads/exito.gif; sourceTree = "<group>"; };
 		AFD564372A19F43700972D51 /* CompraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraController.swift; sourceTree = "<group>"; };
+		AFD564392A19F54000972D51 /* ProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				AF8DBAB72A12D30400FB4AD5 /* Main.storyboard */,
 				AF8DBAC82A12DD6A00FB4AD5 /* VCRegistro.swift */,
 				AF8DBAC22A12D6BD00FB4AD5 /* Producto.swift */,
+				AFD564392A19F54000972D51 /* ProductoController.swift */,
 				AF8DBAC42A12D78100FB4AD5 /* Compra.swift */,
 				AFD564372A19F43700972D51 /* CompraController.swift */,
 				AF8DBACA2A1329E800FB4AD5 /* Venta.swift */,
@@ -163,6 +166,7 @@
 				AFD564382A19F43700972D51 /* CompraController.swift in Sources */,
 				AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */,
 				AF8DBAB42A12D30100FB4AD5 /* ViewController.swift in Sources */,
+				AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */,
 				AF8DBAC32A12D6BD00FB4AD5 /* Producto.swift in Sources */,
 				AF8DBACF2A133B8700FB4AD5 /* LoginController.swift in Sources */,
 				AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */,
