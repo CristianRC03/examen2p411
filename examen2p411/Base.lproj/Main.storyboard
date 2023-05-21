@@ -711,10 +711,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="570" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z0L-37-hYi">
-                                <rect key="frame" x="204" y="298" width="200" height="39"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-j1-Gnf">
+                                <rect key="frame" x="0.0" y="0.0" width="570" height="576"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="border" placeholderString="Usuario" drawsBackground="YES" id="RY3-Rp-Fvm">
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Image" id="IZB-yk-tbf"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoS-fZ-9uX" customClass="NSSecureTextField">
+                                <rect key="frame" x="205" y="255" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="border" placeholderString="Contraseña" drawsBackground="YES" id="4PG-7P-sUI">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4N-uN-6Ks">
+                                <rect key="frame" x="160" y="152" width="251" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Iniciar Sesión" bezelStyle="rounded" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dv0-NI-wcv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" red="0.30547775510000003" green="0.63575991450000002" blue="0.54905438699999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="loginClicked:" target="XfG-lQ-9wD" id="AAz-ya-eNO"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZ0-rH-jEV">
+                                <rect key="frame" x="164" y="218" width="243" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="QeS-Iy-nhT">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.0078431372550000003" green="0.16862745100000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-dX-70T">
+                                <rect key="frame" x="232" y="516" width="106" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="LOG IN" id="7Es-vo-UCw">
+                                    <font key="font" metaFont="systemBold" size="29"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZO-U4-iVx">
+                                <rect key="frame" x="205" y="305" width="200" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="border" placeholderString="Usuario" drawsBackground="YES" id="Ytg-Bb-bjr">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -730,46 +774,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-1G-n7n" customClass="NSSecureTextField">
-                                <rect key="frame" x="204" y="224" width="200" height="40"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5DL-Rt-xTl">
+                                <rect key="frame" x="234" y="211" width="103" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="border" placeholderString="Contraseña" drawsBackground="YES" id="VtE-Nc-Tv7">
-                                    <font key="font" metaFont="system" size="24"/>
-                                    <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVG-QM-9zj">
-                                <rect key="frame" x="247" y="155" width="76" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TgG-KE-YMM">
+                                <buttonCell key="cell" type="push" title="Registrarse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N4a-iF-tAq">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <segue destination="3wH-x8-6O5" kind="modal" id="Vyw-SK-uXc"/>
-                                </connections>
+                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             </button>
-                            <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EkJ-o3-b4W">
-                                <rect key="frame" x="222" y="84" width="97" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="VgB-es-hyu">
-                                    <font key="font" metaFont="system"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="220924800">
-                                        <!--2008-01-02 00:00:00 +0000-->
-                                    </date>
-                                    <date key="minDate" timeIntervalSinceReferenceDate="-2430003600">
-                                        <!--1923-12-31 23:00:00 +0000-->
-                                    </date>
-                                    <date key="maxDate" timeIntervalSinceReferenceDate="220924800">
-                                        <!--2008-01-02 00:00:00 +0000-->
-                                    </date>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                </datePickerCell>
-                            </datePicker>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="txtCorreo" destination="RZO-U4-iVx" id="6Ri-5x-okq"/>
+                        <outlet property="txtPassword" destination="VoS-fZ-9uX" id="tQV-37-IdI"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1134,6 +1153,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="570" height="576"/>
         <image name="at" catalog="system" width="19" height="20"/>
         <image name="birthday.cake.fill" catalog="system" width="23" height="21"/>
         <image name="exclamationmark.lock.fill" catalog="system" width="18" height="18"/>
