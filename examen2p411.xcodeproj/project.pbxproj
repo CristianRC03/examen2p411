@@ -18,6 +18,8 @@
 		AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACA2A1329E800FB4AD5 /* Venta.swift */; };
 		AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACC2A132E2F00FB4AD5 /* Pedido.swift */; };
 		AF8DBACF2A133B8700FB4AD5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */; };
+		AFD564362A19B80700972D51 /* exito.gif in Resources */ = {isa = PBXBuildFile; fileRef = AFD564352A19B80700972D51 /* exito.gif */; };
+		AFD564382A19F43700972D51 /* CompraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564372A19F43700972D51 /* CompraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		AF8DBACA2A1329E800FB4AD5 /* Venta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venta.swift; sourceTree = "<group>"; };
 		AF8DBACC2A132E2F00FB4AD5 /* Pedido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
 		AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AFD564352A19B80700972D51 /* exito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = exito.gif; path = ../../../../Downloads/exito.gif; sourceTree = "<group>"; };
+		AFD564372A19F43700972D51 /* CompraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +72,18 @@
 			children = (
 				AF8DBAB12A12D30100FB4AD5 /* AppDelegate.swift */,
 				AF8DBAB32A12D30100FB4AD5 /* ViewController.swift */,
+				AF8DBAC02A12D55800FB4AD5 /* User.swift */,
 				AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */,
 				AF8DBAB52A12D30400FB4AD5 /* Assets.xcassets */,
 				AF8DBAB72A12D30400FB4AD5 /* Main.storyboard */,
 				AF8DBAC82A12DD6A00FB4AD5 /* VCRegistro.swift */,
-				AF8DBAC02A12D55800FB4AD5 /* User.swift */,
 				AF8DBAC22A12D6BD00FB4AD5 /* Producto.swift */,
 				AF8DBAC42A12D78100FB4AD5 /* Compra.swift */,
+				AFD564372A19F43700972D51 /* CompraController.swift */,
 				AF8DBACA2A1329E800FB4AD5 /* Venta.swift */,
 				AF8DBACC2A132E2F00FB4AD5 /* Pedido.swift */,
 				AF8DBABA2A12D30400FB4AD5 /* examen2p411.entitlements */,
+				AFD564352A19B80700972D51 /* exito.gif */,
 			);
 			path = examen2p411;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8DBAB62A12D30400FB4AD5 /* Assets.xcassets in Resources */,
+				AFD564362A19B80700972D51 /* exito.gif in Resources */,
 				AF8DBAB92A12D30400FB4AD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8DBAC52A12D78100FB4AD5 /* Compra.swift in Sources */,
+				AFD564382A19F43700972D51 /* CompraController.swift in Sources */,
 				AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */,
 				AF8DBAB42A12D30100FB4AD5 /* ViewController.swift in Sources */,
 				AF8DBAC32A12D6BD00FB4AD5 /* Producto.swift in Sources */,

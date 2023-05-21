@@ -19,9 +19,11 @@ class VCRegistro: NSViewController {
     @IBOutlet weak var txtConfirmarPassword: NSTextField!
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var dtpNacimiento: NSDatePicker!
+    @IBOutlet weak var cmbxRol: NSComboBox!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cmbxRol.selectItem(at: 3)
     }
     
     @IBAction func btnCrearClicked(_ sender: NSButton) {
@@ -29,15 +31,21 @@ class VCRegistro: NSViewController {
             let email: String? = txtEmail.stringValue
             if let text = email, text.range(of: emailRegex, options: .regularExpression) != nil {
                 if txtPassword.stringValue == txtConfirmarPassword.stringValue {
-                    loginController.addUser(user: User(id: loginController.users.count + 1, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: 1))
+                    if cmbxRol.indexOfSelectedItem == -1 {
+                        crearAlertaError("No se ha seleccionado ningùn rol")
+                    } else {
+                        loginController.addUser(user: User(id: loginController.users[loginController.users.count-1].id + 1, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: 1))
+                        crearAlertaExito("Usuario agregado con exito")
+                        dismiss(self)
+                    }
                 } else {
-                    crearAlerta("Revisa que las contraseña coincidan")
+                    crearAlertaError("Revisa que las contraseña coincidan")
                 }
             } else {
-                crearAlerta("El correo no coincide con el formatato de correo")
+                crearAlertaError("El correo no coincide con el formatato de correo")
             }
         } else {
-            crearAlerta("Verifica que todos los campos esten llenos")
+            crearAlertaError("Verifica que todos los campos esten llenos")
         }
         
         
@@ -57,10 +65,20 @@ class VCRegistro: NSViewController {
         sender.stringValue = filteredText.joined()
     }
     
-    func crearAlerta(_ errorDescription: String) {
+    func crearAlertaError(_ errorDescription: String) {
         let alert = NSAlert()
         alert.messageText = "Revisa los campos"
         alert.informativeText = errorDescription
+        alert.addButton(withTitle: "OK")
+        alert.alertStyle = .warning
+        alert.beginSheetModal(for: self.view.window!)
+    }
+    
+    func crearAlertaExito (_ description: String) {
+        let alert = NSAlert()
+        alert.messageText = "Exito"
+        alert.informativeText = description
+        alert.icon = NSImage(named: "exito.gif")
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .warning
         alert.beginSheetModal(for: self.view.window!)
