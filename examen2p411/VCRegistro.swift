@@ -11,6 +11,9 @@ class VCRegistro: NSViewController {
     @objc dynamic var loginController = LoginController.compartir
     var emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
+    @IBOutlet weak var imgId: NSImageView!
+    @IBOutlet weak var bgId: NSTextField!
+    @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtNombre: NSTextField!
     @IBOutlet weak var txtApellidoP: NSTextField!
     @IBOutlet weak var txtApellidoM: NSTextField!
@@ -20,6 +23,8 @@ class VCRegistro: NSViewController {
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var dtpNacimiento: NSDatePicker!
     @IBOutlet weak var cmbxRol: NSComboBox!
+    @IBOutlet weak var imgRol: NSImageView!
+    @IBOutlet weak var bgRol: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
