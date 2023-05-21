@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -780,16 +780,16 @@
             <objects>
                 <viewController id="3wH-x8-6O5" customClass="VCRegistro" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="Oqj-NC-Jsw">
-                        <rect key="frame" x="0.0" y="0.0" width="570" height="576"/>
+                        <rect key="frame" x="0.0" y="0.0" width="570" height="614"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-4s-x4w">
-                                <rect key="frame" x="0.0" y="0.0" width="570" height="576"/>
+                                <rect key="frame" x="0.0" y="0.0" width="570" height="614"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondo" id="O8U-jb-sAm"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blt-Jh-ATO">
-                                <rect key="frame" x="142" y="35" width="285" height="513"/>
+                                <rect key="frame" x="142" y="35" width="285" height="541"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="8G2-QI-Ktr">
                                     <font key="font" metaFont="system"/>
@@ -834,7 +834,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bf-BY-ago">
-                                <rect key="frame" x="228" y="457" width="110" height="109"/>
+                                <rect key="frame" x="228" y="505" width="110" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="person" id="ZZz-jZ-sSm"/>
                             </imageView>
@@ -909,6 +909,9 @@
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="txtDidChange:" target="3wH-x8-6O5" id="1As-kJ-xQP"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7k-KE-7A1">
                                 <rect key="frame" x="202" y="357" width="200" height="39"/>
@@ -918,6 +921,9 @@
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="txtDidChange:" target="3wH-x8-6O5" id="6Tf-cY-10H"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmO-AJ-eov">
                                 <rect key="frame" x="163" y="357" width="39" height="39"/>
@@ -981,7 +987,7 @@
                                 <color key="bezelColor" red="0.0039215686269999999" green="0.14117647059999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </button>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QdF-6F-wHr">
-                                <rect key="frame" x="441" y="494" width="97" height="28"/>
+                                <rect key="frame" x="311" y="457" width="97" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="Uj9-oM-60s">
                                     <font key="font" metaFont="system"/>
@@ -1006,6 +1012,9 @@
                                     <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="txtDidChange:" target="3wH-x8-6O5" id="bn0-hX-e4X"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GhZ-bA-8E9">
                                 <rect key="frame" x="164" y="404" width="39" height="39"/>
@@ -1024,6 +1033,52 @@
                                 </imageCell>
                                 <color key="contentTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-Kz-1q8">
+                                <rect key="frame" x="274" y="455" width="39" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="8B4-Mh-KJK">
+                                    <imageReference key="image" image="birthday.cake.fill" catalog="system" symbolScale="large"/>
+                                </imageCell>
+                                <color key="contentTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32q-mi-il2">
+                                <rect key="frame" x="203" y="451" width="63" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="UkS-jZ-BLL">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="txtDidChange:" target="3wH-x8-6O5" id="3YZ-So-sKF"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFy-Kn-e1f">
+                                <rect key="frame" x="164" y="451" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="89M-iJ-VGb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q0t-dX-7QG">
+                                <rect key="frame" x="164" y="447" width="39" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="mfh-9u-hGv">
+                                    <imageReference key="image" image="number.circle.fill" catalog="system" symbolScale="large"/>
+                                </imageCell>
+                                <color key="contentTintColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s6B-aF-S3j">
+                                <rect key="frame" x="274" y="459" width="39" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="Eko-2y-rq5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1032,23 +1087,26 @@
                         <outlet property="btnCrear" destination="sc0-Ap-tuv" id="cnz-jh-xRU"/>
                         <outlet property="btnEliminar" destination="3ku-wY-XaT" id="wM6-Uz-cWh"/>
                         <outlet property="dtpNacimiento" destination="QdF-6F-wHr" id="heZ-mr-eEd"/>
+                        <outlet property="txtApellidoM" destination="GVb-TI-KEh" id="3fn-O5-g6R"/>
+                        <outlet property="txtApellidoP" destination="M7k-KE-7A1" id="VrF-Gw-Ddh"/>
                         <outlet property="txtConfirmarPassword" destination="0WB-1k-9IK" id="DXa-nt-AHR"/>
                         <outlet property="txtEmail" destination="pKQ-8L-kyR" id="dhe-kk-Jg9"/>
-                        <outlet property="txtNombre" destination="M7k-KE-7A1" id="zkO-w2-1zb"/>
+                        <outlet property="txtNombre" destination="p96-AG-fif" id="Ypd-SI-r1m"/>
                         <outlet property="txtPassword" destination="Jat-rz-ESg" id="QOo-Et-Kba"/>
-                        <outlet property="txtTelefono" destination="GVb-TI-KEh" id="3fn-O5-g6R"/>
                     </connections>
                 </viewController>
                 <customObject id="OBw-A2-mZS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="827"/>
+            <point key="canvasLocation" x="702" y="846"/>
         </scene>
     </scenes>
     <resources>
         <image name="at" catalog="system" width="19" height="20"/>
+        <image name="birthday.cake.fill" catalog="system" width="23" height="21"/>
         <image name="exclamationmark.lock.fill" catalog="system" width="18" height="18"/>
         <image name="fondo" width="826" height="551"/>
         <image name="lock.trianglebadge.exclamationmark.fill" catalog="system" width="19" height="19"/>
+        <image name="number.circle.fill" catalog="system" width="19" height="19"/>
         <image name="person" width="753" height="749"/>
         <image name="person.fill" catalog="system" width="18" height="17"/>
         <image name="person.fill.questionmark" catalog="system" width="22" height="18"/>
