@@ -16,6 +16,7 @@ class vcProducto: NSViewController {
     @IBOutlet weak var txtUnidad: NSTextField!
     @IBOutlet weak var txtPrecio: NSTextField!
     @IBOutlet weak var txtCosto: NSTextField!
+    @IBOutlet weak var txtCategoria: NSTextField!
     
     //Buttons
     @IBOutlet weak var btnCrear: NSButton!
@@ -27,4 +28,9 @@ class vcProducto: NSViewController {
         // Do view setup here.
     }
     
+    @IBAction func textDidChange(_ sender: NSTextField) {
+            let characterSet = NSCharacterSet.decimalDigits
+            let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
+            sender.stringValue = filteredText
+        }
 }

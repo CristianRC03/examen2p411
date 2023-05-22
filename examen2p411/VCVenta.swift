@@ -13,6 +13,9 @@ class VCVenta: NSViewController {
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtCantidad: NSTextField!
     @IBOutlet weak var txtSubtotal: NSTextField!
+    @IBOutlet weak var txtInfoProducto: NSTextField!
+    @IBOutlet weak var txtIVA: NSTextField!
+    @IBOutlet weak var txtTotal: NSTextField!
     
     //ComboBox
     @IBOutlet weak var cmbCliente: NSComboBox!
@@ -28,5 +31,11 @@ class VCVenta: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
+    @IBAction func textDidChange(_ sender: NSTextField) {
+            let characterSet = NSCharacterSet.decimalDigits
+            let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
+            sender.stringValue = filteredText
+        }
     
 }
