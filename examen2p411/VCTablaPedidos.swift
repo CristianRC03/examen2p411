@@ -8,6 +8,7 @@
 import Cocoa
 
 class VCTablaPedidos: NSViewController {
+    @objc dynamic var pedidoController = PedidoController.compartir
     
     //TextFields
     @IBOutlet weak var txtBuscar: NSTextField!
