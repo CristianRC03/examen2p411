@@ -13,8 +13,11 @@ class VCWelcomeAdmin: NSViewController {
     @IBOutlet weak var lblUsuario: NSTextField!
     
     //Buttons
-    @IBOutlet weak var btnAlta: NSButton!
-    @IBOutlet weak var btnConsulta: NSButton!
+    
+    @IBOutlet weak var btnCliente: NSButton!
+    @IBOutlet weak var btnUsuarios: NSButton!
+    @IBOutlet weak var btnComprador: NSButton!
+    @IBOutlet weak var btnVendedor: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

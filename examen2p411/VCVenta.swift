@@ -32,4 +32,10 @@ class VCVenta: NSViewController {
         // Do view setup here.
     }
     
+    @IBAction func textDidChange(_ sender: NSTextField) {
+            let characterSet = NSCharacterSet.decimalDigits
+            let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
+            sender.stringValue = filteredText
+        }
+    
 }
