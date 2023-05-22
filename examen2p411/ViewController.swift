@@ -11,6 +11,7 @@ class ViewController: NSViewController {
     @objc dynamic var loginController = LoginController.compartir
     @objc dynamic static var userGlobal: User?
     @objc dynamic var mensaje: String?
+    @objc dynamic var flag: Bool = true
 
     @IBOutlet weak var txtCorreo: NSTextField!
     @IBOutlet weak var txtPassword: NSSecureTextField!
@@ -33,7 +34,7 @@ class ViewController: NSViewController {
             crearAlertaError("Usuario y/o contraseña \n incorrecto(s)")
         } else {
             mensaje = "Bienvenido " + ViewController.userGlobal!.email
-            performSegue(withIdentifier: "irALogin", sender: self)
+            performSegue(withIdentifier: "irTablaUsers", sender: self)
         }
     }
     
@@ -48,6 +49,13 @@ class ViewController: NSViewController {
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .warning
         alert.beginSheetModal(for: self.view.window!)
+    }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "irRegistrar" {
+            let destinationVC = segue.destinationController as! VCRegistro
+            destinationVC.flag = flag
+        }
     }
 
 }

@@ -10,6 +10,7 @@ import Cocoa
 class VCRegistro: NSViewController {
     @objc dynamic var loginController = LoginController.compartir
     var emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    var flag: Bool!
 
     @IBOutlet weak var imgId: NSImageView!
     @IBOutlet weak var bgId: NSTextField!
@@ -25,10 +26,14 @@ class VCRegistro: NSViewController {
     @IBOutlet weak var cmbxRol: NSComboBox!
     @IBOutlet weak var imgRol: NSImageView!
     @IBOutlet weak var bgRol: NSTextField!
+    @IBOutlet weak var btnActualizar: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cmbxRol.selectItem(at: 3)
+        cmbxRol.isHidden = flag
+        btnActualizar.isHidden = flag
+        btnCrear.isHidden = !flag
     }
     
     @IBAction func btnCrearClicked(_ sender: NSButton) {
