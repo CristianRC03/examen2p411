@@ -2509,7 +2509,7 @@
                 </viewController>
                 <customObject id="DMu-uN-IpU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="672"/>
+            <point key="canvasLocation" x="1202" y="443"/>
         </scene>
         <!--Tabla Pedidos-->
         <scene sceneID="TZv-0U-E2Z">
@@ -2995,7 +2995,7 @@
                 </viewController>
                 <customObject id="stc-Gb-pB5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="218"/>
+            <point key="canvasLocation" x="1202" y="1"/>
         </scene>
         <!--Tabla Users-->
         <scene sceneID="nyU-Yz-8x5">
@@ -3651,7 +3651,7 @@
                 </viewController>
                 <customObject id="baG-SV-vix" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1092"/>
+            <point key="canvasLocation" x="1202" y="846"/>
         </scene>
         <!--Welcome Cliente-->
         <scene sceneID="HQO-Bb-JJa">
@@ -3721,13 +3721,81 @@
                 </viewController>
                 <customObject id="vi6-gN-yIH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1502"/>
+            <point key="canvasLocation" x="1202" y="1253"/>
+        </scene>
+        <!--Welcome Usuario-->
+        <scene sceneID="nsf-Zz-4nA">
+            <objects>
+                <viewController id="Qzp-RX-C29" customClass="VCWelcomeUsuario" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="1wZ-Yz-WR0">
+                        <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7A-1g-PZF">
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondo" id="qy6-kc-3cD"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-Rd-teW">
+                                <rect key="frame" x="39" y="201" width="206" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Usuario" id="iYg-jC-Bbq">
+                                    <font key="font" metaFont="systemHeavy" size="24"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yc8-GV-iL4">
+                                <rect key="frame" x="113" y="87" width="58" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Alta" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MFE-eM-E0r">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEa-LM-a50">
+                                <rect key="frame" x="98" y="44" width="88" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Consulta" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yzP-RY-HA1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-Xl-5MV">
+                                <rect key="frame" x="40" y="159" width="206" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Usuario" id="waf-Ab-XJ7">
+                                    <font key="font" metaFont="system" size="19"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zui-mz-xr1">
+                                <rect key="frame" x="51" y="237" width="206" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Bienvenido" id="0OD-bG-HhW">
+                                    <font key="font" metaFont="systemBold" size="37"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnAlta" destination="Yc8-GV-iL4" id="S32-p8-mqA"/>
+                        <outlet property="btnConsulta" destination="rEa-LM-a50" id="Kyl-UC-zOw"/>
+                        <outlet property="lblUsuario" destination="qkZ-Rd-teW" id="KFt-zb-Nez"/>
+                    </connections>
+                </viewController>
+                <customObject id="mxm-kW-6oe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="1638"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="570" height="576"/>
-        <image name="NSTouchBarSearchTemplate" width="20" height="19"/>
-        <image name="NSFollowLinkFreestandingTemplate" width="15" height="15"/>
         <image name="at.circle.fill" catalog="system" width="19" height="19"/>
         <image name="birthday.cake.fill" catalog="system" width="23" height="21"/>
         <image name="exclamationmark.lock.fill" catalog="system" width="18" height="18"/>

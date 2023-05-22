@@ -33,6 +33,7 @@
 		F557196D2A1AFDC400FEA86A /* VCTablaInventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557196C2A1AFDC400FEA86A /* VCTablaInventario.swift */; };
 		F557196F2A1AFF1900FEA86A /* VCTablaVenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557196E2A1AFF1900FEA86A /* VCTablaVenta.swift */; };
 		F55719712A1AFFE300FEA86A /* VCTablaPedidos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719702A1AFFE300FEA86A /* VCTablaPedidos.swift */; };
+		F55719752A1B181500FEA86A /* VCWelcomeUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719742A1B181500FEA86A /* VCWelcomeUsuario.swift */; };
 		F5942B562A1AD1A100474F5B /* VCCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B552A1AD1A100474F5B /* VCCompra.swift */; };
 		F5942B582A1AD2C200474F5B /* VCVenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B572A1AD2C200474F5B /* VCVenta.swift */; };
 		F5942B5A2A1AD45400474F5B /* VCPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B592A1AD45400474F5B /* VCPedido.swift */; };
@@ -66,6 +67,7 @@
 		F557196C2A1AFDC400FEA86A /* VCTablaInventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaInventario.swift; sourceTree = "<group>"; };
 		F557196E2A1AFF1900FEA86A /* VCTablaVenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaVenta.swift; sourceTree = "<group>"; };
 		F55719702A1AFFE300FEA86A /* VCTablaPedidos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaPedidos.swift; sourceTree = "<group>"; };
+		F55719742A1B181500FEA86A /* VCWelcomeUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWelcomeUsuario.swift; sourceTree = "<group>"; };
 		F5942B512A1ACE5000474F5B /* VCProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProducto.swift; sourceTree = "<group>"; };
 		F5942B552A1AD1A100474F5B /* VCCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCompra.swift; sourceTree = "<group>"; };
 		F5942B572A1AD2C200474F5B /* VCVenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVenta.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */,
 				AF8DBAB52A12D30400FB4AD5 /* Assets.xcassets */,
 				AF8DBAB72A12D30400FB4AD5 /* Main.storyboard */,
+				F55719742A1B181500FEA86A /* VCWelcomeUsuario.swift */,
 				AF2457652A1AF38B0054515F /* VCTablaUsers.swift */,
 				F55719702A1AFFE300FEA86A /* VCTablaPedidos.swift */,
 				F557196E2A1AFF1900FEA86A /* VCTablaVenta.swift */,
@@ -231,6 +234,7 @@
 				F55719692A1AFC1C00FEA86A /* VCWelcomeCliente.swift in Sources */,
 				AF8DBAC12A12D55800FB4AD5 /* User.swift in Sources */,
 				AFD5643C2A19F95000972D51 /* VentaController.swift in Sources */,
+				F55719752A1B181500FEA86A /* VCWelcomeUsuario.swift in Sources */,
 				AF8DBAC92A12DD6A00FB4AD5 /* VCRegistro.swift in Sources */,
 				F5942B582A1AD2C200474F5B /* VCVenta.swift in Sources */,
 			);
