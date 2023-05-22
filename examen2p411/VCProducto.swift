@@ -38,7 +38,17 @@ class vcProducto: NSViewController {
             crearAlertaError("Verifica que todos los campos esten llenos")
         }
     }
-        
+    
+    
+    @IBAction func btnModificarClicked(_ sender: NSButton) {
+        if validarCamposLlenos(){
+                    productoController.actualizarProducto(productoActualizado: Producto(id: txtId.integerValue, name: txtNombre.stringValue, description: txtDescripcion.stringValue, unit: txtUnidad.stringValue, price: txtPrecio.doubleValue, cost: txtCosto.doubleValue, category: txtCategoria.stringValue))
+                           crearAlertaExito("Producto modificado con exito")
+                       }else {
+                           crearAlertaError("Verifica que todos los campos esten llenos")
+                       }
+    }
+    
                                                    
                                                    
     

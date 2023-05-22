@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1603,6 +1603,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnModificarClicked:" target="OoQ-EL-rd2" id="v4F-ig-OoW"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deq-vj-wbx">
                                 <rect key="frame" x="5" y="13" width="82" height="32"/>
@@ -2153,6 +2156,9 @@
                                         <string>Item 3</string>
                                     </objectValues>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="itemChanged:" target="dcI-s0-iLs" id="9p6-xv-r1R"/>
+                                </connections>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cp-WK-rth">
                                 <rect key="frame" x="128" y="105" width="43" height="21"/>
@@ -2180,6 +2186,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnActualizarClicked:" target="dcI-s0-iLs" id="GxT-yU-BdZ"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2j-Tb-Hxt">
                                 <rect key="frame" x="75" y="36" width="82" height="32"/>
@@ -2207,6 +2216,7 @@
                         <outlet property="btnModificar" destination="86F-mC-Tlu" id="QzQ-EH-wtu"/>
                         <outlet property="cmbProducto" destination="Cgc-C6-zc6" id="Xfw-qZ-etk"/>
                         <outlet property="txtId" destination="Qv1-TJ-Nm5" id="Na4-jZ-FHh"/>
+                        <outlet property="txtInfoProducto" destination="aFg-bk-MZY" id="TDe-tN-kRr"/>
                         <outlet property="txtTotal" destination="A4N-Wm-1as" id="1fy-EZ-PLc"/>
                     </connections>
                 </viewController>

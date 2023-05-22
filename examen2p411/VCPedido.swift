@@ -9,9 +9,16 @@ import Cocoa
 
 class VCPedido: NSViewController {
     
+    @objc dynamic var productoController =
+    ProductoController.compartir
+    
+    @objc dynamic var pedidoController =
+    PedidoController.compartir
+    
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtTotal: NSTextField!
+    @IBOutlet weak var txtInfoProducto: NSTextField!
     
     //ComboBox
     @IBOutlet weak var cmbProducto: NSComboBox!
@@ -23,7 +30,51 @@ class VCPedido: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        let nombres = productoController.productos.map{$0.name}
+        cmbProducto.addItems(withObjectValues: nombres)
     }
+    
+    func validarCamposLlenos() -> Bool {
+        if txtId.stringValue.isEmpty || txtTotal.stringValue.isEmpty || txtInfoProducto.stringValue.isEmpty || cmbProducto.indexOfSelectedItem == -1 {
+                return false
+            }
+            return true
+    }
+    
+    
+    @IBAction func btnActualizarClicked(_ sender: NSComboBox) {
+        if validarCamposLlenos(){
+            pedidoController.actualizarPedido(pedidoActualizado: Pedido(id: Int(txtId.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, total: txtTotal.doubleValue))
+            crearAlertaExito("Pedido actualizado con exito")
+        }else{
+            crearAlertaError("Verifica que todos los campos esten llenos")
+        }
+    }
+    
+    @IBAction func itemChanged(_ sender: NSComboBox) {
+        let producto = productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)
+        txtInfoProducto.stringValue = producto!.descripcion
+    }
+    
+    func crearAlertaError(_ errorDescription: String) {
+        let alert = NSAlert()
+        alert.messageText = "Revisa los campos"
+        alert.informativeText = errorDescription
+        alert.addButton(withTitle: "OK")
+        alert.alertStyle = .warning
+        alert.beginSheetModal(for: self.view.window!)
+    }
+
+    func crearAlertaExito (_ description: String) {
+        let alert = NSAlert()
+        alert.messageText = "Exito"
+        alert.informativeText = description
+        alert.icon = NSImage(named: "exito.gif")
+        alert.addButton(withTitle: "OK")
+        alert.alertStyle = .warning
+        alert.beginSheetModal(for: self.view.window!)
+    }
+    
+    
     
 }
