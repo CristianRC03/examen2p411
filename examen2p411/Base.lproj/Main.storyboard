@@ -2479,7 +2479,7 @@
                 </viewController>
                 <customObject id="DMu-uN-IpU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1077"/>
+            <point key="canvasLocation" x="1202" y="672"/>
         </scene>
         <!--Tabla Pedidos-->
         <scene sceneID="TZv-0U-E2Z">
@@ -2877,10 +2877,10 @@
             </objects>
             <point key="canvasLocation" x="1145" y="2769"/>
         </scene>
-        <!--Bienvenida-->
+        <!--Welcome Admin-->
         <scene sceneID="7RI-SD-7Bo">
             <objects>
-                <viewController title="Bienvenida" id="SMK-JA-2Ju" customClass="VCWelcomeAdmin" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SMK-JA-2Ju" customClass="VCWelcomeAdmin" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="MNc-l6-3tZ">
                         <rect key="frame" x="0.0" y="0.0" width="279" height="299"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2945,7 +2945,7 @@
                 </viewController>
                 <customObject id="stc-Gb-pB5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="642"/>
+            <point key="canvasLocation" x="1202" y="218"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nyU-Yz-8x5">
@@ -3432,7 +3432,7 @@
                 </viewController>
                 <customObject id="baG-SV-vix" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1458"/>
+            <point key="canvasLocation" x="1202" y="1092"/>
         </scene>
         <!--Welcome Cliente-->
         <scene sceneID="HQO-Bb-JJa">
@@ -3502,7 +3502,7 @@
                 </viewController>
                 <customObject id="vi6-gN-yIH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1852"/>
+            <point key="canvasLocation" x="1202" y="1502"/>
         </scene>
     </scenes>
     <resources>
