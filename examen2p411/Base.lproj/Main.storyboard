@@ -2119,7 +2119,7 @@
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFg-bk-MZY">
                                 <rect key="frame" x="131" y="144" width="205" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="aAn-xL-low">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="aAn-xL-low">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2138,6 +2138,9 @@
                                         <string>Item 3</string>
                                     </objectValues>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="itemChanged:" target="dcI-s0-iLs" id="NJM-9o-nwk"/>
+                                </connections>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cp-WK-rth">
                                 <rect key="frame" x="128" y="105" width="43" height="21"/>
@@ -2158,7 +2161,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86F-mC-Tlu">
-                                <rect key="frame" x="190" y="36" width="92" height="32"/>
+                                <rect key="frame" x="271" y="36" width="92" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Modificar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0cH-4H-cUk">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -2166,32 +2169,13 @@
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2j-Tb-Hxt">
-                                <rect key="frame" x="75" y="36" width="82" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Eliminar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uwZ-f9-itb">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfB-NX-KVF">
-                                <rect key="frame" x="321" y="36" width="68" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Crear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nhb-dU-DIF">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="btnCrear" destination="UfB-NX-KVF" id="Uaq-dF-tNx"/>
-                        <outlet property="btnEliminar" destination="S2j-Tb-Hxt" id="z6N-90-TlM"/>
                         <outlet property="btnModificar" destination="86F-mC-Tlu" id="QzQ-EH-wtu"/>
                         <outlet property="cmbProducto" destination="Cgc-C6-zc6" id="Xfw-qZ-etk"/>
                         <outlet property="txtId" destination="Qv1-TJ-Nm5" id="Na4-jZ-FHh"/>
+                        <outlet property="txtInfoProducto" destination="aFg-bk-MZY" id="RgS-zu-HAN"/>
                         <outlet property="txtTotal" destination="A4N-Wm-1as" id="1fy-EZ-PLc"/>
                     </connections>
                 </viewController>

@@ -36,6 +36,6 @@ class VCVenta: NSViewController {
             let characterSet = NSCharacterSet.decimalDigits
             let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
             sender.stringValue = filteredText
-        }
+    }
     
 }
