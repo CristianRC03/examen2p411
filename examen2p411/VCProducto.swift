@@ -8,6 +8,8 @@
 import Cocoa
 
 class vcProducto: NSViewController {
+    @objc dynamic var productoController =
+    ProductoController.compartir
     
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
@@ -25,12 +27,50 @@ class vcProducto: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+    }
+    
+    @IBAction func btnCrearClicked(_ sender: NSButton){
+        if validarCamposLlenos(){
+            productoController.addProducto(producto: Producto(id: productoController.productos[productoController.productos.count-1].id + 1, name: txtNombre.stringValue, description: txtDescripcion.stringValue, unit: txtUnidad.stringValue, price: txtPrecio.doubleValue, cost: txtCosto.doubleValue, category: txtCategoria.stringValue))
+            crearAlertaExito("Producto agregado con exito")
+        }else {
+            crearAlertaError("Verifica que todos los campos esten llenos")
+        }
+    }
+        
+                                                   
+                                                   
+    
+    func validarCamposLlenos() -> Bool {
+        if ( txtNombre.stringValue.isEmpty || txtDescripcion.stringValue.isEmpty || txtUnidad.stringValue.isEmpty || txtPrecio.stringValue.isEmpty || txtCosto.stringValue.isEmpty || txtCategoria.stringValue.isEmpty) {
+            return false
+        }
+        return true
+    }
+
+    func crearAlertaError(_ errorDescription: String) {
+        let alert = NSAlert()
+        alert.messageText = "Revisa los campos"
+        alert.informativeText = errorDescription
+        alert.addButton(withTitle: "OK")
+        alert.alertStyle = .warning
+        alert.beginSheetModal(for: self.view.window!)
+    }
+
+    func crearAlertaExito (_ description: String) {
+        let alert = NSAlert()
+        alert.messageText = "Exito"
+        alert.informativeText = description
+        alert.icon = NSImage(named: "exito.gif")
+        alert.addButton(withTitle: "OK")
+        alert.alertStyle = .warning
+        alert.beginSheetModal(for: self.view.window!)
     }
     
     @IBAction func textDidChange(_ sender: NSTextField) {
             let characterSet = NSCharacterSet.decimalDigits
             let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
             sender.stringValue = filteredText
-        }
+    }
 }

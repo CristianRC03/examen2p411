@@ -9,6 +9,8 @@ import Cocoa
 
 class VCCompra: NSViewController {
     
+    @objc dynamic var productoController = ProductoController.compartir
+    
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtCantidad: NSTextField!
@@ -16,7 +18,6 @@ class VCCompra: NSViewController {
     
     //ComboBox
     @IBOutlet weak var cmbProducto: NSComboBox!
-    @IBOutlet weak var cmbComprador: NSComboBox!
     
     //Buttons
     @IBOutlet weak var btnCrear: NSButton!
@@ -25,13 +26,15 @@ class VCCompra: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        for producto in productoController.productos {
+                    cmbProducto.addItem(withObjectValue: producto.name)
+        }
     }
     
     @IBAction func textDidChange(_ sender: NSTextField) {
             let characterSet = NSCharacterSet.decimalDigits
             let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
             sender.stringValue = filteredText
-        }
+    }
     
 }
