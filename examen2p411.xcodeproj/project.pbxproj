@@ -23,7 +23,7 @@
 		AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564392A19F54000972D51 /* ProductoController.swift */; };
 		AFD5643C2A19F95000972D51 /* VentaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5643B2A19F95000972D51 /* VentaController.swift */; };
 		AFD5643E2A19FAC600972D51 /* PedidoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5643D2A19FAC600972D51 /* PedidoController.swift */; };
-		F5942B522A1ACE5000474F5B /* VCProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B512A1ACE5000474F5B /* VCProducto.swift */; };
+		F55719612A1AF17F00FEA86A /* VCProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B512A1ACE5000474F5B /* VCProducto.swift */; };
 		F5942B562A1AD1A100474F5B /* VCCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B552A1AD1A100474F5B /* VCCompra.swift */; };
 		F5942B582A1AD2C200474F5B /* VCVenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B572A1AD2C200474F5B /* VCVenta.swift */; };
 		F5942B5A2A1AD45400474F5B /* VCPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B592A1AD45400474F5B /* VCPedido.swift */; };
@@ -186,9 +186,9 @@
 				F5942B562A1AD1A100474F5B /* VCCompra.swift in Sources */,
 				AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */,
 				AF8DBAB42A12D30100FB4AD5 /* ViewController.swift in Sources */,
-				F5942B522A1ACE5000474F5B /* VCProducto.swift in Sources */,
 				AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */,
 				AF8DBAC32A12D6BD00FB4AD5 /* Producto.swift in Sources */,
+				F55719612A1AF17F00FEA86A /* VCProducto.swift in Sources */,
 				AF8DBACF2A133B8700FB4AD5 /* LoginController.swift in Sources */,
 				AFD5643E2A19FAC600972D51 /* PedidoController.swift in Sources */,
 				AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */,

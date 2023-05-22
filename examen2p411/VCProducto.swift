@@ -16,6 +16,7 @@ class vcProducto: NSViewController {
     @IBOutlet weak var txtUnidad: NSTextField!
     @IBOutlet weak var txtPrecio: NSTextField!
     @IBOutlet weak var txtCosto: NSTextField!
+    @IBOutlet weak var txtCategoria: NSTextField!
     
     //Buttons
     @IBOutlet weak var btnCrear: NSButton!

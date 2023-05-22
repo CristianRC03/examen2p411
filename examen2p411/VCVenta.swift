@@ -13,6 +13,7 @@ class VCVenta: NSViewController {
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtCantidad: NSTextField!
     @IBOutlet weak var txtSubtotal: NSTextField!
+    @IBOutlet weak var txtInfoProducto: NSTextField!
     
     //ComboBox
     @IBOutlet weak var cmbCliente: NSComboBox!

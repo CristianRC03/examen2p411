@@ -12,6 +12,7 @@ class VCCompra: NSViewController {
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
     @IBOutlet weak var txtCantidad: NSTextField!
+    @IBOutlet weak var txtInfoProducto: NSTextField!
     
     //ComboBox
     @IBOutlet weak var cmbProducto: NSComboBox!
