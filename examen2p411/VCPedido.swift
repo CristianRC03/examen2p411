@@ -9,7 +9,9 @@ import Cocoa
 
 class VCPedido: NSViewController {
     
-    @objc dynamic var productoController = productoController.compartir
+    @objc dynamic var pedidoController =  PedidoController.compartir
+    @objc dynamic var productoController =
+    ProductoController.compartir
     
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
@@ -37,7 +39,7 @@ class VCPedido: NSViewController {
     
     func btnActualizarClicked() {
             if validarCamposLlenos(){
-                productoController.actualizarPedido(pedido: Pedido(id: Int(txtId.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem +1), total: txtTotal.stringValue))
+                pedidoController.actualizarPedido(pedidoActualizado: Pedido(id: Int(txtId.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, total: txtTotal.doubleValue))
                 crearAlertaExito("Pedido actualizado con exito")
             }else{
                 crearAlertaError("Verifica que todos los campos esten llenos")
@@ -46,8 +48,8 @@ class VCPedido: NSViewController {
     }
     
     @IBAction func itemChanged(_ sender: NSComboBox) {
-        let producto = productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem +1)
-        txtInfoProducto.stringValue = producto?.descripcion
+        let producto = productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)
+        txtInfoProducto.stringValue = producto!.descripcion
     }
     
     func crearAlertaError(_ errorDescription: String) {
