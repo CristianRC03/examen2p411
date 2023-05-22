@@ -8,6 +8,7 @@
 import Cocoa
 
 class VCTablaVenta: NSViewController {
+    @objc dynamic var ventaController = VentaController.compartir
     
     //TextFields
     @IBOutlet weak var txtBuscar: NSTextField!
