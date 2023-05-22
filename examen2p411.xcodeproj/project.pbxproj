@@ -24,6 +24,14 @@
 		AFD5643C2A19F95000972D51 /* VentaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5643B2A19F95000972D51 /* VentaController.swift */; };
 		AFD5643E2A19FAC600972D51 /* PedidoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5643D2A19FAC600972D51 /* PedidoController.swift */; };
 		F55719612A1AF17F00FEA86A /* VCProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B512A1ACE5000474F5B /* VCProducto.swift */; };
+		F55719632A1AFA0400FEA86A /* VCWelcomeAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719622A1AFA0400FEA86A /* VCWelcomeAdmin.swift */; };
+		F55719652A1AFABC00FEA86A /* VCWelcomeComprador.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719642A1AFABC00FEA86A /* VCWelcomeComprador.swift */; };
+		F55719672A1AFBA900FEA86A /* VCWelcomeVendedor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719662A1AFBA900FEA86A /* VCWelcomeVendedor.swift */; };
+		F55719692A1AFC1C00FEA86A /* VCWelcomeCliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719682A1AFC1C00FEA86A /* VCWelcomeCliente.swift */; };
+		F557196B2A1AFCF300FEA86A /* VCTablaProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557196A2A1AFCF300FEA86A /* VCTablaProductos.swift */; };
+		F557196D2A1AFDC400FEA86A /* VCTablaInventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557196C2A1AFDC400FEA86A /* VCTablaInventario.swift */; };
+		F557196F2A1AFF1900FEA86A /* VCTablaVenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557196E2A1AFF1900FEA86A /* VCTablaVenta.swift */; };
+		F55719712A1AFFE300FEA86A /* VCTablaPedidos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55719702A1AFFE300FEA86A /* VCTablaPedidos.swift */; };
 		F5942B562A1AD1A100474F5B /* VCCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B552A1AD1A100474F5B /* VCCompra.swift */; };
 		F5942B582A1AD2C200474F5B /* VCVenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B572A1AD2C200474F5B /* VCVenta.swift */; };
 		F5942B5A2A1AD45400474F5B /* VCPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5942B592A1AD45400474F5B /* VCPedido.swift */; };
@@ -48,6 +56,14 @@
 		AFD564392A19F54000972D51 /* ProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoController.swift; sourceTree = "<group>"; };
 		AFD5643B2A19F95000972D51 /* VentaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentaController.swift; sourceTree = "<group>"; };
 		AFD5643D2A19FAC600972D51 /* PedidoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedidoController.swift; sourceTree = "<group>"; };
+		F55719622A1AFA0400FEA86A /* VCWelcomeAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWelcomeAdmin.swift; sourceTree = "<group>"; };
+		F55719642A1AFABC00FEA86A /* VCWelcomeComprador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWelcomeComprador.swift; sourceTree = "<group>"; };
+		F55719662A1AFBA900FEA86A /* VCWelcomeVendedor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWelcomeVendedor.swift; sourceTree = "<group>"; };
+		F55719682A1AFC1C00FEA86A /* VCWelcomeCliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWelcomeCliente.swift; sourceTree = "<group>"; };
+		F557196A2A1AFCF300FEA86A /* VCTablaProductos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaProductos.swift; sourceTree = "<group>"; };
+		F557196C2A1AFDC400FEA86A /* VCTablaInventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaInventario.swift; sourceTree = "<group>"; };
+		F557196E2A1AFF1900FEA86A /* VCTablaVenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaVenta.swift; sourceTree = "<group>"; };
+		F55719702A1AFFE300FEA86A /* VCTablaPedidos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaPedidos.swift; sourceTree = "<group>"; };
 		F5942B512A1ACE5000474F5B /* VCProducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProducto.swift; sourceTree = "<group>"; };
 		F5942B552A1AD1A100474F5B /* VCCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCompra.swift; sourceTree = "<group>"; };
 		F5942B572A1AD2C200474F5B /* VCVenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCVenta.swift; sourceTree = "<group>"; };
@@ -90,6 +106,14 @@
 				AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */,
 				AF8DBAB52A12D30400FB4AD5 /* Assets.xcassets */,
 				AF8DBAB72A12D30400FB4AD5 /* Main.storyboard */,
+				F55719702A1AFFE300FEA86A /* VCTablaPedidos.swift */,
+				F557196E2A1AFF1900FEA86A /* VCTablaVenta.swift */,
+				F557196C2A1AFDC400FEA86A /* VCTablaInventario.swift */,
+				F557196A2A1AFCF300FEA86A /* VCTablaProductos.swift */,
+				F55719682A1AFC1C00FEA86A /* VCWelcomeCliente.swift */,
+				F55719662A1AFBA900FEA86A /* VCWelcomeVendedor.swift */,
+				F55719642A1AFABC00FEA86A /* VCWelcomeComprador.swift */,
+				F55719622A1AFA0400FEA86A /* VCWelcomeAdmin.swift */,
 				AF8DBAC82A12DD6A00FB4AD5 /* VCRegistro.swift */,
 				AF8DBAC22A12D6BD00FB4AD5 /* Producto.swift */,
 				F5942B512A1ACE5000474F5B /* VCProducto.swift */,
@@ -182,10 +206,13 @@
 			files = (
 				F5942B5A2A1AD45400474F5B /* VCPedido.swift in Sources */,
 				AF8DBAC52A12D78100FB4AD5 /* Compra.swift in Sources */,
+				F557196D2A1AFDC400FEA86A /* VCTablaInventario.swift in Sources */,
+				F55719672A1AFBA900FEA86A /* VCWelcomeVendedor.swift in Sources */,
 				AFD564382A19F43700972D51 /* CompraController.swift in Sources */,
 				F5942B562A1AD1A100474F5B /* VCCompra.swift in Sources */,
 				AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */,
 				AF8DBAB42A12D30100FB4AD5 /* ViewController.swift in Sources */,
+				F55719652A1AFABC00FEA86A /* VCWelcomeComprador.swift in Sources */,
 				AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */,
 				AF8DBAC32A12D6BD00FB4AD5 /* Producto.swift in Sources */,
 				F55719612A1AF17F00FEA86A /* VCProducto.swift in Sources */,
@@ -193,6 +220,11 @@
 				AFD5643E2A19FAC600972D51 /* PedidoController.swift in Sources */,
 				AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */,
 				AF8DBAB22A12D30100FB4AD5 /* AppDelegate.swift in Sources */,
+				F557196F2A1AFF1900FEA86A /* VCTablaVenta.swift in Sources */,
+				F557196B2A1AFCF300FEA86A /* VCTablaProductos.swift in Sources */,
+				F55719632A1AFA0400FEA86A /* VCWelcomeAdmin.swift in Sources */,
+				F55719712A1AFFE300FEA86A /* VCTablaPedidos.swift in Sources */,
+				F55719692A1AFC1C00FEA86A /* VCWelcomeCliente.swift in Sources */,
 				AF8DBAC12A12D55800FB4AD5 /* User.swift in Sources */,
 				AFD5643C2A19F95000972D51 /* VentaController.swift in Sources */,
 				AF8DBAC92A12DD6A00FB4AD5 /* VCRegistro.swift in Sources */,

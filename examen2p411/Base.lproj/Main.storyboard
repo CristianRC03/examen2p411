@@ -2193,10 +2193,10 @@
             </objects>
             <point key="canvasLocation" x="1767" y="2290"/>
         </scene>
-        <!--View Controller-->
+        <!--Tabla Productos-->
         <scene sceneID="S89-0N-uQE">
             <objects>
-                <viewController id="3hf-JO-kyN" sceneMemberID="viewController">
+                <viewController id="3hf-JO-kyN" customClass="VCTablaProductos" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="G57-0b-j23">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="335"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2215,19 +2215,10 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFQ-HZ-h8j">
-                                <rect key="frame" x="330" y="221" width="39" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarSearchTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z4O-YC-bwv">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="14"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
-                            </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-5B-jJ9">
-                                <rect key="frame" x="370" y="228" width="96" height="21"/>
+                                <rect key="frame" x="308" y="226" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="Wcz-a2-KD8">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Wcz-a2-KD8">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2378,17 +2369,32 @@
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-HT-u3j">
+                                <rect key="frame" x="411" y="218" width="76" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Buscar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zXX-zE-8PN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnBuscar" destination="6gA-HT-u3j" id="svf-aH-cwg"/>
+                        <outlet property="btnEliminar" destination="3rq-sR-iM4" id="8j4-Vg-elb"/>
+                        <outlet property="btnModificar" destination="Lvc-U4-gkL" id="pp0-9V-lga"/>
+                        <outlet property="txtBuscar" destination="dcC-5B-jJ9" id="M4u-w7-Kwq"/>
+                    </connections>
                 </viewController>
                 <customObject id="mxR-I6-kra" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58" y="2746"/>
         </scene>
-        <!--Bienvenida-->
+        <!--Welcome Comprador-->
         <scene sceneID="V61-tV-Kkg">
             <objects>
-                <viewController title="Bienvenida" id="Xpx-pf-erV" sceneMemberID="viewController">
+                <viewController id="Xpx-pf-erV" customClass="VCWelcomeComprador" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="MGT-Ow-70i">
                         <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2463,15 +2469,22 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnAltaInventario" destination="dk1-KQ-qv7" id="SLW-JE-oLk"/>
+                        <outlet property="btnAltaProducto" destination="P3M-tp-e7P" id="D2K-mT-cft"/>
+                        <outlet property="btnConsultaInventario" destination="OSb-qg-BaD" id="tK7-l8-RRp"/>
+                        <outlet property="btnConsultaProducto" destination="acU-nU-Ygx" id="YCU-WJ-vrx"/>
+                        <outlet property="lblUsuario" destination="ms9-Qc-IL9" id="P0P-2m-sb5"/>
+                    </connections>
                 </viewController>
                 <customObject id="DMu-uN-IpU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1202" y="1077"/>
         </scene>
-        <!--View Controller-->
+        <!--Tabla Pedidos-->
         <scene sceneID="TZv-0U-E2Z">
             <objects>
-                <viewController id="zag-t9-cjf" sceneMemberID="viewController">
+                <viewController id="zag-t9-cjf" customClass="VCTablaPedidos" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ve5-mO-h0l">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="335"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2655,15 +2668,21 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnBuscar" destination="lcb-l4-Huj" id="hhS-bw-uGS"/>
+                        <outlet property="btnEliminar" destination="DMi-Oi-yt7" id="XL0-Rf-7mo"/>
+                        <outlet property="btnModificar" destination="cjd-o4-Z93" id="rcN-Rw-hZ2"/>
+                        <outlet property="txtBuscar" destination="Nzi-xE-RLh" id="xsS-uQ-mXD"/>
+                    </connections>
                 </viewController>
                 <customObject id="nps-UG-1qK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767" y="2746"/>
         </scene>
-        <!--View Controller-->
+        <!--Tabla Venta-->
         <scene sceneID="w6f-eO-F02">
             <objects>
-                <viewController id="tcl-LG-N06" sceneMemberID="viewController">
+                <viewController id="tcl-LG-N06" customClass="VCTablaVenta" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="5eJ-Rc-Li0">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="335"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2685,7 +2704,7 @@
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-Y4-b6W">
                                 <rect key="frame" x="308" y="227" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" bezelStyle="round" id="Fxe-Te-R4S">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Fxe-Te-R4S">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2847,6 +2866,12 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnBuscar" destination="P9A-8Y-DZg" id="s9V-jz-wXF"/>
+                        <outlet property="btnEliminar" destination="wkF-VV-TuM" id="e8P-7A-Zyh"/>
+                        <outlet property="btnModificar" destination="6jJ-Ag-cHO" id="4VC-kG-jfV"/>
+                        <outlet property="txtBuscar" destination="G9G-Y4-b6W" id="RKn-ad-9wg"/>
+                    </connections>
                 </viewController>
                 <customObject id="hNL-tm-EMF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2855,7 +2880,7 @@
         <!--Bienvenida-->
         <scene sceneID="7RI-SD-7Bo">
             <objects>
-                <viewController title="Bienvenida" id="SMK-JA-2Ju" customClass="vcWelcome" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bienvenida" id="SMK-JA-2Ju" customClass="VCWelcomeAdmin" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="MNc-l6-3tZ">
                         <rect key="frame" x="0.0" y="0.0" width="279" height="299"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2912,6 +2937,11 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnAlta" destination="SKo-iE-aIm" id="aoi-EH-Uig"/>
+                        <outlet property="btnConsulta" destination="dUU-JA-VNe" id="NAN-rP-Wim"/>
+                        <outlet property="lblUsuario" destination="W4b-ZK-JBY" id="Hl9-4S-huV"/>
+                    </connections>
                 </viewController>
                 <customObject id="stc-Gb-pB5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3136,10 +3166,10 @@
             </objects>
             <point key="canvasLocation" x="1674" y="888"/>
         </scene>
-        <!--View Controller-->
+        <!--Tabla Inventario-->
         <scene sceneID="wwj-q0-L8F">
             <objects>
-                <viewController id="Azk-6j-IOC" sceneMemberID="viewController">
+                <viewController id="Azk-6j-IOC" customClass="VCTablaInventario" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="fTG-Ig-tf6">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="335"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3323,15 +3353,21 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnBuscar" destination="jZR-kz-0PA" id="atI-GI-Sxz"/>
+                        <outlet property="btnEliminar" destination="GIP-bA-lce" id="55M-1i-SK5"/>
+                        <outlet property="btnModificar" destination="PQ0-4S-5WE" id="vsS-zc-DSk"/>
+                        <outlet property="txtBuscar" destination="RCo-yW-qy8" id="mZv-Bd-60E"/>
+                    </connections>
                 </viewController>
                 <customObject id="DGc-A0-Ms9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="528" y="2769"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome Vendedor-->
         <scene sceneID="oc2-de-d3K">
             <objects>
-                <viewController id="Z6V-pR-f2e" sceneMemberID="viewController">
+                <viewController id="Z6V-pR-f2e" customClass="VCWelcomeVendedor" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="q3m-q0-mjb">
                         <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3388,15 +3424,20 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnAlta" destination="59J-EZ-0KH" id="fZ3-BO-Qd7"/>
+                        <outlet property="btnConsulta" destination="ljY-Du-ziU" id="E5q-S8-qyd"/>
+                        <outlet property="lblUsuario" destination="0KV-g3-hRI" id="TCj-YO-EJg"/>
+                    </connections>
                 </viewController>
                 <customObject id="baG-SV-vix" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122.5" y="1850"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome Cliente-->
         <scene sceneID="HQO-Bb-JJa">
             <objects>
-                <viewController id="Gus-dv-yph" sceneMemberID="viewController">
+                <viewController id="Gus-dv-yph" customClass="VCWelcomeCliente" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="H47-kD-mJW">
                         <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3453,6 +3494,11 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnActualizar" destination="CFT-kf-sLM" id="vpo-NY-j0D"/>
+                        <outlet property="btnConsulta" destination="AsB-4x-q8i" id="iYE-9X-OWw"/>
+                        <outlet property="lblUsuario" destination="Ebz-8Z-ZBf" id="6j3-My-2ii"/>
+                    </connections>
                 </viewController>
                 <customObject id="vi6-gN-yIH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3462,7 +3508,6 @@
     <resources>
         <image name="Image" width="570" height="576"/>
         <image name="NSFollowLinkFreestandingTemplate" width="15" height="15"/>
-        <image name="NSTouchBarSearchTemplate" width="15" height="15"/>
         <image name="at.circle.fill" catalog="system" width="19" height="19"/>
         <image name="birthday.cake.fill" catalog="system" width="23" height="21"/>
         <image name="exclamationmark.lock.fill" catalog="system" width="18" height="18"/>
