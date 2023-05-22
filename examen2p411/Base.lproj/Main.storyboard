@@ -3432,7 +3432,7 @@
                 </viewController>
                 <customObject id="baG-SV-vix" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122.5" y="1850"/>
+            <point key="canvasLocation" x="1202" y="1458"/>
         </scene>
         <!--Welcome Cliente-->
         <scene sceneID="HQO-Bb-JJa">
@@ -3502,7 +3502,7 @@
                 </viewController>
                 <customObject id="vi6-gN-yIH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.5" y="1850"/>
+            <point key="canvasLocation" x="1202" y="1852"/>
         </scene>
     </scenes>
     <resources>
