@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1769,6 +1769,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnActualizarClicked:" target="4oK-GN-QUo" id="Gi6-Qj-yes"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4i-4H-qzd">
                                 <rect key="frame" x="87" y="38" width="82" height="32"/>
@@ -1787,6 +1790,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="crearClicked:" target="4oK-GN-QUo" id="rTq-nm-uci"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ill-J4-PRi">
                                 <rect key="frame" x="121" y="152" width="77" height="21"/>
@@ -1913,7 +1919,7 @@
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGp-sZ-2EQ">
                                 <rect key="frame" x="127" y="263" width="209" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="wS1-Z4-dtc">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="wS1-Z4-dtc">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1991,6 +1997,9 @@
                                         <string>Item 3</string>
                                     </objectValues>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="itemChanged:" target="tzw-b3-P24" id="4g8-SH-NDp"/>
+                                </connections>
                             </comboBox>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53k-an-chU">
                                 <rect key="frame" x="183" y="13" width="92" height="32"/>
@@ -2000,6 +2009,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnActualizarClicked:" target="tzw-b3-P24" id="TmH-EE-jbS"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-Ek-gJM">
                                 <rect key="frame" x="68" y="13" width="82" height="32"/>
@@ -2018,6 +2030,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnCrearClicked:" target="tzw-b3-P24" id="mhU-23-Ctc"/>
+                                </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLY-mD-sGC">
                                 <rect key="frame" x="223" y="99" width="106" height="21"/>
