@@ -36,5 +36,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "785436EC-9365-4BE1-9AA4-9B2DDB4967AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "examen2p411/VCCompra.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "785436EC-9365-4BE1-9AA4-9B2DDB4967AF - 6f2cfcc518b30d79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "examen2p411.VCCompra.viewDidLoad() -&gt; ()"
+                  moduleName = "examen2p411"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristianromero/Documents/Mac/examen2p411/examen2p411/VCCompra.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "785436EC-9365-4BE1-9AA4-9B2DDB4967AF - 6f2cfcc518b30d79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "examen2p411.VCCompra.viewDidLoad() -&gt; ()"
+                  moduleName = "examen2p411"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristianromero/Documents/Mac/examen2p411/examen2p411/VCCompra.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

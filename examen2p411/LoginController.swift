@@ -54,4 +54,23 @@ class LoginController: NSObject {
         }
         return nil
     }
+    
+    func usuariosCliente() -> [User] {
+        var usuariosCliente: [User] = []
+        for user in users {
+            if user.role == 4 {
+                usuariosCliente.append(user)
+            }
+        }
+        return usuariosCliente
+    }
+    
+    func buscarEmailUser(email: String) -> User? {
+        for user in users {
+            if user.email == email {
+                return user
+            }
+        }
+        return nil
+    }
 }
