@@ -43,6 +43,9 @@ class VCVenta: NSViewController {
         let characterSet = NSCharacterSet.decimalDigits
         let filteredText = sender.stringValue.components(separatedBy: characterSet.inverted).joined()
         sender.stringValue = filteredText
+        if cmbProducto.indexOfSelectedItem > -1 {
+            txtSubtotal.doubleValue = productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * sender.doubleValue
+        }
     }
     
     @IBAction func btnCrearClicked(_ sender: NSButton) {
@@ -50,10 +53,20 @@ class VCVenta: NSViewController {
             let venta = Venta(id: ventaController.ventas[ventaController.ventas.count - 1].id + 1, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, subtotal: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * Double(txtCantidad.integerValue))
             ventaController.addVenta(venta: venta)
             pedidoController.addPedido(pedido: Pedido(id: pedidoController.pedidos[pedidoController.pedidos.count - 1].id + 1, product: venta.product, total: venta.total))
-            crearAlertaExito("Verdad actuaizada con exito")
+            crearAlertaExito("Venta actuaizada con exito")
         } else {
             crearAlertaError("Verifica que todos los campos esten llenos")
         }
+    }
+    
+    @IBAction func btnActualizarClicked(_ sender: NSButton) {
+        if (validarCamposLlenos()) {
+            ventaController.actualizarVenta(ventaActualizada: Venta(id: txtId.integerValue, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, subtotal: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * Double(txtCantidad.integerValue)))
+            crearAlertaExito("Venta actualizada con exito")
+        } else {
+            crearAlertaError("Verifica que todos los campos esten llenos")
+        }
+        
     }
     
     @IBAction func itemChanged(_ sender: NSComboBox) {
@@ -62,7 +75,7 @@ class VCVenta: NSViewController {
     }
     
     func validarCamposLlenos() -> Bool {
-        if (cmbCliente.indexOfSelectedItem < 1 || cmbProducto.indexOfSelectedItem < 1 || txtInfoProducto.stringValue.isEmpty || txtCantidad.stringValue.isEmpty || txtCantidad.integerValue < 1 || txtSubtotal.stringValue.isEmpty || txtSubtotal.doubleValue < 1 || txtIVA.stringValue.isEmpty || txtIVA.doubleValue < 0.16 || txtTotal.stringValue.isEmpty || txtTotal.doubleValue < 1.16) {
+        if (cmbCliente.indexOfSelectedItem < 0 || cmbProducto.indexOfSelectedItem < 0 || txtInfoProducto.stringValue.isEmpty || txtCantidad.stringValue.isEmpty || txtCantidad.integerValue < 0 || txtSubtotal.stringValue.isEmpty || txtSubtotal.doubleValue < 0 || txtIVA.stringValue.isEmpty || txtIVA.doubleValue < 0.16 || txtTotal.stringValue.isEmpty || txtTotal.doubleValue < 1.16) {
             return false
         } else {
             return true

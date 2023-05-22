@@ -2009,6 +2009,9 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="btnActualizarClicked:" target="tzw-b3-P24" id="TmH-EE-jbS"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-Ek-gJM">
                                 <rect key="frame" x="68" y="13" width="82" height="32"/>
