@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2457662A1AF38B0054515F /* VCTablaUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2457652A1AF38B0054515F /* VCTablaUsers.swift */; };
 		AF8DBAB22A12D30100FB4AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBAB12A12D30100FB4AD5 /* AppDelegate.swift */; };
 		AF8DBAB42A12D30100FB4AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBAB32A12D30100FB4AD5 /* ViewController.swift */; };
 		AF8DBAB62A12D30400FB4AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8DBAB52A12D30400FB4AD5 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2457652A1AF38B0054515F /* VCTablaUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTablaUsers.swift; sourceTree = "<group>"; };
 		AF8DBAAE2A12D30100FB4AD5 /* examen2p411.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examen2p411.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DBAB12A12D30100FB4AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF8DBAB32A12D30100FB4AD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */,
 				AF8DBAB52A12D30400FB4AD5 /* Assets.xcassets */,
 				AF8DBAB72A12D30400FB4AD5 /* Main.storyboard */,
+				AF2457652A1AF38B0054515F /* VCTablaUsers.swift */,
 				AF8DBAC82A12DD6A00FB4AD5 /* VCRegistro.swift */,
 				AF8DBAC22A12D6BD00FB4AD5 /* Producto.swift */,
 				F5942B512A1ACE5000474F5B /* VCProducto.swift */,
@@ -182,6 +185,7 @@
 			files = (
 				F5942B5A2A1AD45400474F5B /* VCPedido.swift in Sources */,
 				AF8DBAC52A12D78100FB4AD5 /* Compra.swift in Sources */,
+				AF2457662A1AF38B0054515F /* VCTablaUsers.swift in Sources */,
 				AFD564382A19F43700972D51 /* CompraController.swift in Sources */,
 				F5942B562A1AD1A100474F5B /* VCCompra.swift in Sources */,
 				AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */,
