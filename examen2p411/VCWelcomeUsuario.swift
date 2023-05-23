@@ -1,5 +1,5 @@
 //
-//  VCWelcomeVendedor.swift
+//  VCWelcomeUsuario.swift
 //  examen2p411
 //
 //  Created by Diego Romero on 21/05/23.
@@ -7,8 +7,8 @@
 
 import Cocoa
 
-class VCWelcomeVendedor: NSViewController {
-    
+class VCWelcomeUsuario: NSViewController {
+
     //Labels
     @IBOutlet weak var lblUsuario: NSTextField!
     
@@ -22,9 +22,10 @@ class VCWelcomeVendedor: NSViewController {
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if segue.identifier == "irFormVentAct" {
-            let destinationVC = segue.destinationController as! VCVenta
+        if segue.identifier == "irFormUser" {
+            let destinationVC = segue.destinationController as! VCRegistro
             destinationVC.flag = true
+            destinationVC.hidden = false
         }
     }
     

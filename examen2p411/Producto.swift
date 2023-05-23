@@ -15,8 +15,9 @@ class Producto: NSObject {
     @objc dynamic var price: Double
     @objc dynamic var cost: Double
     @objc dynamic var category: String
+    @objc dynamic var exist: Int
     
-    init(id: Int, name: String, description: String, unit: String, price: Double, cost: Double, category: String) {
+    init(id: Int, name: String, description: String, unit: String, price: Double, cost: Double, category: String, exist: Int) {
         self.id = id
         self.name = name
         self.descripcion = description
@@ -24,5 +25,6 @@ class Producto: NSObject {
         self.price = price
         self.cost = cost
         self.category = category
+        self.exist = exist
     }
 }

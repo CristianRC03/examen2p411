@@ -8,6 +8,7 @@
 import Cocoa
 
 class VCWelcomeCliente: NSViewController {
+    @objc dynamic var pedidoController = PedidoController.compartir
     
     //Labels
     @IBOutlet weak var lblUsuario: NSTextField!
@@ -19,6 +20,17 @@ class VCWelcomeCliente: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        let destinationvc = segue.destinationController as! VCTablaPedidos
+        if segue.identifier == "irPediTabla" {
+            if ViewController.userGlobal!.role == 1 {
+                destinationvc.pedidosUsuario = pedidoController.pedidos
+            } else {
+                destinationvc.pedidosUsuario = pedidoController.pedidosDeCliente(client: ViewController.userGlobal!)
+            }
+        }
     }
     
 }

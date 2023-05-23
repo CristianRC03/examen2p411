@@ -23,4 +23,16 @@ class VCWelcomeComprador: NSViewController {
         // Do view setup here.
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "irFormProdAct" {
+            let destinationVC = segue.destinationController as! vcProducto
+            destinationVC.flag = true
+        } else {
+            if segue.identifier == "irFormCompAct" {
+                let destinationVC = segue.destinationController as! VCCompra
+                destinationVC.flag = true
+            }
+        }
+    }
+    
 }
