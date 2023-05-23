@@ -45,7 +45,13 @@ class VCCompra: NSViewController {
     
     @IBAction func crearClicked(_ sender: NSButton) {
         if(validarCamposLlenos()) {
-            let compra = Compra(id: compraController.compras[compraController.compras.count - 1].id + 1, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, buyer: ViewController.userGlobal!)
+            var idCompra: Int
+            if (compraController.compras.count == 0) {
+                idCompra = 1
+            } else {
+                idCompra = compraController.compras.last!.id + 1
+            }
+            let compra = Compra(id: idCompra, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, buyer: ViewController.userGlobal!)
             compra.product.exist += txtCantidad.integerValue
             compraController.addCompra(compra: compra)
             productoController.actualizarProducto(productoActualizado: compra.product)

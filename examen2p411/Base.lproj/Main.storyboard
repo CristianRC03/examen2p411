@@ -1815,11 +1815,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="556"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-Ke-ota">
-                                <rect key="frame" x="-251" y="-7" width="820" height="607"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoazul" id="DUh-Bq-lhQ"/>
-                            </imageView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DW7-8q-iUB">
                                 <rect key="frame" x="-115" y="567" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2012,6 +2007,11 @@
                                     <action selector="btnCrearClicked:" target="tzw-b3-P24" id="mhU-23-Ctc"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-Ke-ota">
+                                <rect key="frame" x="-251" y="-7" width="820" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoazul" id="DUh-Bq-lhQ"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
@@ -2487,7 +2487,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Sgo-te-fQZ">
-                                    <rect key="frame" x="1" y="124" width="672" height="16"/>
+                                    <rect key="frame" x="1" y="183" width="672" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="r3A-nt-aio">
@@ -2880,7 +2880,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="UoN-t0-nDL">
-                                    <rect key="frame" x="1" y="125" width="554" height="15"/>
+                                    <rect key="frame" x="1" y="125" width="629" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="yOa-zv-agM">
@@ -3275,7 +3275,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="SGi-4V-hCe">
-                                    <rect key="frame" x="1" y="119" width="751" height="15"/>
+                                    <rect key="frame" x="1" y="183" width="828" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="c6W-LW-IeT">
@@ -4080,7 +4080,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="80l-cQ-9sG">
-                                    <rect key="frame" x="1" y="166" width="610" height="15"/>
+                                    <rect key="frame" x="1" y="166" width="707" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Vr5-pQ-Be1">

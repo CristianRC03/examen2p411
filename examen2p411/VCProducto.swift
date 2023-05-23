@@ -37,6 +37,7 @@ class vcProducto: NSViewController {
     
     @IBAction func btnCrearClicked(_ sender: NSButton){
         if validarCamposLlenos(){
+            
             productoController.addProducto(producto: Producto(id: productoController.productos[productoController.productos.count-1].id + 1, name: txtNombre.stringValue, description: txtDescripcion.stringValue, unit: txtUnidad.stringValue, price: txtPrecio.doubleValue, cost: txtCosto.doubleValue, category: txtCategoria.stringValue, exist: 0))
             crearAlertaExito("Producto agregado con exito")
             dismiss(self)

@@ -60,10 +60,22 @@ class VCVenta: NSViewController {
             if (txtCantidad.integerValue > productoController.productos[cmbProducto.indexOfSelectedItem].exist) {
                 crearAlertaError("No hay existencias para la compra")
             } else {
-                let venta = Venta(id: ventaController.ventas[ventaController.ventas.count - 1].id + 1, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.productos[cmbProducto.indexOfSelectedItem], quantity: txtCantidad.integerValue, subtotal: productoController.productos[cmbProducto.indexOfSelectedItem].price * Double(txtCantidad.integerValue))
+                var idVenta: Int
+                var idPedido: Int
+                if (ventaController.ventas.count == 0) {
+                    idVenta = 1
+                } else{
+                    idVenta = ventaController.ventas.last!.id+1
+                }
+                if(pedidoController.pedidos.count == 0) {
+                    idPedido = 1
+                } else {
+                    idPedido = ventaController.ventas.last!.id+1
+                }
+                let venta = Venta(id: idVenta, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.productos[cmbProducto.indexOfSelectedItem], quantity: txtCantidad.integerValue, subtotal: productoController.productos[cmbProducto.indexOfSelectedItem].price * Double(txtCantidad.integerValue))
                 venta.product.exist = productoController.productos[cmbProducto.indexOfSelectedItem].exist - txtCantidad.integerValue
                 ventaController.addVenta(venta: venta)
-                pedidoController.addPedido(pedido: Pedido(id: pedidoController.pedidos[pedidoController.pedidos.count - 1].id + 1, product: venta.product, total: venta.total, client: venta.client))
+                pedidoController.addPedido(pedido: Pedido(id: idPedido, product: venta.product, total: venta.total, client: venta.client))
                 productoController.actualizarProducto(productoActualizado: venta.product)
                 crearAlertaExito("Venta agregada con exito")
             }

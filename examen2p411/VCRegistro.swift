@@ -55,7 +55,13 @@ class VCRegistro: NSViewController {
                         if (loginController.validarEmailRepetido(email: txtEmail.stringValue)) {
                             crearAlertaError("El correo ya existe, ingresa uno diferente")
                         } else {
-                            loginController.addUser(user: User(id: loginController.users[loginController.users.count-1].id + 1, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: cmbxRol.indexOfSelectedItem + 1))
+                            var idUser: Int
+                            if loginController.users.count == 0 {
+                                idUser = 1
+                            } else {
+                                idUser = loginController.users.last!.id + 1
+                            }
+                            loginController.addUser(user: User(id: idUser, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: cmbxRol.indexOfSelectedItem + 1))
                             crearAlertaExito("Usuario agregado con exito")
                             dismiss(self)
                         }
