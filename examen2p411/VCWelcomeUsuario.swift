@@ -21,4 +21,12 @@ class VCWelcomeUsuario: NSViewController {
         // Do view setup here.
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "irFormUser" {
+            let destinationVC = segue.destinationController as! VCRegistro
+            destinationVC.flag = true
+            destinationVC.hidden = false
+        }
+    }
+    
 }

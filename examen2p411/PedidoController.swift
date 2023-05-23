@@ -45,5 +45,15 @@ class PedidoController: NSObject {
         }
         return nil
     }
+    
+    func pedidosDeCliente(client: User) -> [Pedido] {
+        var pedidosCliente: [Pedido] = []
+        for pedido in pedidos {
+            if pedido.client == client {
+                pedidosCliente.append(pedido)
+            }
+        }
+        return pedidosCliente
+    }
 
 }

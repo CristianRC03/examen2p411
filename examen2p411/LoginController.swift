@@ -73,4 +73,13 @@ class LoginController: NSObject {
         }
         return nil
     }
+    
+    func validarEmailRepetido(email: String) -> Bool {
+        for user in users {
+            if user.email == email {
+                return true
+            }
+        }
+        return false
+    }
 }

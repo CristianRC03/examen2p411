@@ -11,6 +11,8 @@ class VCRegistro: NSViewController {
     @objc dynamic var loginController = LoginController.compartir
     var emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     var flag: Bool!
+    var hidden: Bool!
+    var idUserAct: Int?
 
     @IBOutlet weak var imgId: NSImageView!
     @IBOutlet weak var bgId: NSTextField!
@@ -31,9 +33,15 @@ class VCRegistro: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cmbxRol.selectItem(at: 3)
-        cmbxRol.isHidden = flag
+        cmbxRol.isHidden = hidden
+        bgRol.isHidden = hidden
+        imgRol.isHidden = hidden
+        txtId.isHidden = hidden
+        bgId.isHidden = hidden
+        imgId.isHidden = hidden
         btnActualizar.isHidden = flag
         btnCrear.isHidden = !flag
+        userAActualizar()
     }
     
     @IBAction func btnCrearClicked(_ sender: NSButton) {
@@ -44,9 +52,13 @@ class VCRegistro: NSViewController {
                     if cmbxRol.indexOfSelectedItem == -1 {
                         crearAlertaError("No se ha seleccionado ningùn rol")
                     } else {
-                        loginController.addUser(user: User(id: loginController.users[loginController.users.count-1].id + 1, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: 1))
-                        crearAlertaExito("Usuario agregado con exito")
-                        dismiss(self)
+                        if (loginController.validarEmailRepetido(email: txtEmail.stringValue)) {
+                            crearAlertaError("El correo ya existe, ingresa uno diferente")
+                        } else {
+                            loginController.addUser(user: User(id: loginController.users[loginController.users.count-1].id + 1, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: cmbxRol.indexOfSelectedItem + 1))
+                            crearAlertaExito("Usuario agregado con exito")
+                            dismiss(self)
+                        }
                     }
                 } else {
                     crearAlertaError("Revisa que las contraseña coincidan")
@@ -57,9 +69,33 @@ class VCRegistro: NSViewController {
         } else {
             crearAlertaError("Verifica que todos los campos esten llenos")
         }
-        
-        
-        
+    }
+    
+    @IBAction func btnActualizarClicked(_ sender: NSButton) {
+        if validarCamposLlenos() {
+            let email: String? = txtEmail.stringValue
+            if let text = email, text.range(of: emailRegex, options: .regularExpression) != nil {
+                if txtPassword.stringValue == txtConfirmarPassword.stringValue {
+                    if cmbxRol.indexOfSelectedItem == -1 {
+                        crearAlertaError("No se ha seleccionado ningùn rol")
+                    } else {
+                        if (loginController.validarEmailRepetido(email: txtEmail.stringValue)) {
+                            crearAlertaError("El correo ya existe, ingresa uno diferente")
+                        } else {
+                            loginController.actualizarUser(userActualizar: User(id: txtId.integerValue, name: txtNombre.stringValue, firstName: txtApellidoP.stringValue, lastName: txtApellidoM.stringValue, email: txtEmail.stringValue, password: txtPassword.stringValue, birthdate: dtpNacimiento.dateValue, role: 1))
+                            crearAlertaExito("Usuario actualizado con exito")
+                            dismiss(self)
+                        }
+                    }
+                } else {
+                    crearAlertaError("Revisa que las contraseña coincidan")
+                }
+            } else {
+                crearAlertaError("El correo no coincide con el formatato de correo")
+            }
+        } else {
+            crearAlertaError("Verifica que todos los campos esten llenos")
+        }
     }
     
     func validarCamposLlenos() -> Bool {
@@ -92,5 +128,19 @@ class VCRegistro: NSViewController {
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .warning
         alert.beginSheetModal(for: self.view.window!)
+    }
+    
+    func userAActualizar() {
+        if idUserAct != nil {
+            let userAct = loginController.buscarUser(id: idUserAct!)
+            txtId.integerValue = userAct!.id
+            dtpNacimiento.dateValue = userAct!.birthdate
+            txtNombre.stringValue = userAct!.name
+            txtApellidoP.stringValue = userAct!.firstName
+            txtApellidoM.stringValue = userAct!.lastName
+            txtEmail.stringValue = userAct!.email
+            txtPassword.stringValue = userAct!.password
+            txtConfirmarPassword.stringValue = userAct!.password
+        }
     }
 }

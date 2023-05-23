@@ -11,6 +11,8 @@ class VCCompra: NSViewController {
     
     @objc dynamic var compraController = CompraController.compartir
     @objc dynamic var productoController = ProductoController.compartir
+    var flag: Bool!
+    var idCompAct: Int?
     
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
@@ -30,6 +32,9 @@ class VCCompra: NSViewController {
         for producto in productoController.productos {
             cmbProducto.addItem(withObjectValue: producto.name)
         }
+        btnCrear.isHidden = !flag
+        btnModificar.isHidden = flag
+        compraAActualizar()
     }
     
     @IBAction func textDidChange(_ sender: NSTextField) {
@@ -40,7 +45,10 @@ class VCCompra: NSViewController {
     
     @IBAction func crearClicked(_ sender: NSButton) {
         if(validarCamposLlenos()) {
-            compraController.addCompra(compra: Compra(id: compraController.compras[compraController.compras.count - 1].id + 1, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, buyer: ViewController.userGlobal!))
+            let compra = Compra(id: compraController.compras[compraController.compras.count - 1].id + 1, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, buyer: ViewController.userGlobal!)
+            compra.product.exist += txtCantidad.integerValue
+            compraController.addCompra(compra: compra)
+            productoController.actualizarProducto(productoActualizado: compra.product)
             crearAlertaExito("Compra creada con exito")
         } else {
             crearAlertaError("Verifica que todos los campos esten llenos")
@@ -81,5 +89,19 @@ class VCCompra: NSViewController {
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .warning
         alert.beginSheetModal(for: self.view.window!)
+    }
+    
+    @IBAction func comboBoxChanged(_ sender: NSComboBoxCell) {
+        txtInfoProducto.stringValue = productoController.productos[cmbProducto.indexOfSelectedItem].descripcion
+    }
+    
+    func compraAActualizar() {
+        if idCompAct != nil {
+            let compAct = compraController.buscarCompras(id: idCompAct!)
+            txtId.integerValue = compAct!.id
+            cmbProducto.selectItem(at: cmbProducto.indexOfItem(withObjectValue: compAct!.product.name))
+            txtInfoProducto.stringValue = compAct!.product.descripcion
+            txtCantidad.integerValue = compAct!.quantity
+        }
     }
 }

@@ -12,6 +12,8 @@ class VCVenta: NSViewController {
     @objc dynamic var loginController = LoginController.compartir
     @objc dynamic var productoController = ProductoController.compartir
     @objc dynamic var pedidoController = PedidoController.compartir
+    var flag: Bool!
+    var idVentAct: Int?
     
     //TextFields
     @IBOutlet weak var txtId: NSTextField!
@@ -37,6 +39,9 @@ class VCVenta: NSViewController {
         cmbCliente.addItems(withObjectValues: correos)
         let nombres = productoController.productos.map{ $0.name }
         cmbProducto.addItems(withObjectValues: nombres)
+        btnCrear.isHidden = !flag
+        btnModificar.isHidden = flag
+        ventaAActualizar()
     }
     
     @IBAction func textDidChange(_ sender: NSTextField) {
@@ -45,15 +50,23 @@ class VCVenta: NSViewController {
         sender.stringValue = filteredText
         if cmbProducto.indexOfSelectedItem > -1 {
             txtSubtotal.doubleValue = productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * sender.doubleValue
+            txtIVA.doubleValue = txtSubtotal.doubleValue * 0.16
+            txtTotal.doubleValue = txtSubtotal.doubleValue + txtIVA.doubleValue
         }
     }
     
     @IBAction func btnCrearClicked(_ sender: NSButton) {
         if (validarCamposLlenos()) {
-            let venta = Venta(id: ventaController.ventas[ventaController.ventas.count - 1].id + 1, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, subtotal: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * Double(txtCantidad.integerValue))
-            ventaController.addVenta(venta: venta)
-            pedidoController.addPedido(pedido: Pedido(id: pedidoController.pedidos[pedidoController.pedidos.count - 1].id + 1, product: venta.product, total: venta.total))
-            crearAlertaExito("Venta actuaizada con exito")
+            if (txtCantidad.integerValue > productoController.productos[cmbProducto.indexOfSelectedItem].exist) {
+                crearAlertaError("No hay existencias para la compra")
+            } else {
+                let venta = Venta(id: ventaController.ventas[ventaController.ventas.count - 1].id + 1, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.productos[cmbProducto.indexOfSelectedItem], quantity: txtCantidad.integerValue, subtotal: productoController.productos[cmbProducto.indexOfSelectedItem].price * Double(txtCantidad.integerValue))
+                venta.product.exist = productoController.productos[cmbProducto.indexOfSelectedItem].exist - txtCantidad.integerValue
+                ventaController.addVenta(venta: venta)
+                pedidoController.addPedido(pedido: Pedido(id: pedidoController.pedidos[pedidoController.pedidos.count - 1].id + 1, product: venta.product, total: venta.total, client: venta.client))
+                productoController.actualizarProducto(productoActualizado: venta.product)
+                crearAlertaExito("Venta agregada con exito")
+            }
         } else {
             crearAlertaError("Verifica que todos los campos esten llenos")
         }
@@ -99,6 +112,20 @@ class VCVenta: NSViewController {
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .warning
         alert.beginSheetModal(for: self.view.window!)
+    }
+    
+    func ventaAActualizar() {
+        if idVentAct != nil {
+            let ventaAct = ventaController.buscarVenta(id: idVentAct!)
+            txtId.integerValue = ventaAct!.id
+            cmbCliente.selectItem(at: cmbCliente.indexOfItem(withObjectValue: ventaAct!.client.email))
+            cmbProducto.selectItem(at: cmbProducto.indexOfItem(withObjectValue: ventaAct!.product.name))
+            txtInfoProducto.stringValue = ventaAct!.product.descripcion
+            txtCantidad.integerValue = ventaAct!.quantity
+            txtSubtotal.doubleValue = ventaAct!.subtotal
+            txtIVA.doubleValue = ventaAct!.iva
+            txtTotal.doubleValue = ventaAct!.total
+        }
     }
     
 }

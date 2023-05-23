@@ -21,4 +21,11 @@ class VCWelcomeVendedor: NSViewController {
         // Do view setup here.
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "irFormVentAct" {
+            let destinationVC = segue.destinationController as! VCVenta
+            destinationVC.flag = true
+        }
+    }
+    
 }

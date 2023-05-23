@@ -44,7 +44,9 @@ class VCPedido: NSViewController {
     
     @IBAction func btnActualizarClicked(_ sender: NSComboBox) {
         if validarCamposLlenos(){
-            pedidoController.actualizarPedido(pedidoActualizado: Pedido(id: Int(txtId.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, total: txtTotal.doubleValue))
+            let dateString = "18/6/2002"
+            let dateFormatter = DateFormatter()
+            pedidoController.actualizarPedido(pedidoActualizado: Pedido(id: Int(txtId.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, total: txtTotal.doubleValue, client: User(id: 1, name: "", firstName: "", lastName: "", email: "", password: "", birthdate: dateFormatter.date(from: dateString)!, role: 4)))
             crearAlertaExito("Pedido actualizado con exito")
         }else{
             crearAlertaError("Verifica que todos los campos esten llenos")
