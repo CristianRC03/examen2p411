@@ -27,9 +27,13 @@ class vcProducto: NSViewController {
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var btnModificar: NSButton!
     @IBOutlet weak var btnEliminar: NSButton!
+    @IBOutlet weak var bgImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
         btnCrear.isHidden = !flag
         btnModificar.isHidden = flag
         productoAActualizar()

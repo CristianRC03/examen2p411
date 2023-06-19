@@ -31,10 +31,14 @@ class VCVenta: NSViewController {
     @IBOutlet weak var btnCrear: NSButton!
     @IBOutlet weak var btnModificar: NSButton!
     @IBOutlet weak var btnEliminar: NSButton!
+    @IBOutlet weak var bgImage: NSImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
         let correos = loginController.usuariosCliente().map{ $0.email }
         cmbCliente.addItems(withObjectValues: correos)
         let nombres = productoController.productos.map{ $0.name }
@@ -86,7 +90,9 @@ class VCVenta: NSViewController {
     
     @IBAction func btnActualizarClicked(_ sender: NSButton) {
         if (validarCamposLlenos()) {
-            ventaController.actualizarVenta(ventaActualizada: Venta(id: txtId.integerValue, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, subtotal: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * Double(txtCantidad.integerValue)))
+            let ventaActualizada = Venta(id: txtId.integerValue, client: loginController.buscarEmailUser(email: cmbCliente.stringValue)!, product: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!, quantity: txtCantidad.integerValue, subtotal: productoController.buscarProductos(id: cmbProducto.indexOfSelectedItem + 1)!.price * Double(txtCantidad.integerValue))
+            ventaController.actualizarVenta(ventaActualizada: ventaActualizada)
+            pedidoController.actualizarPedido(pedidoActualizado: Pedido(id: txtId.integerValue, product: ventaActualizada.product, total: ventaActualizada.total, client: ventaActualizada.client))
             crearAlertaExito("Venta actualizada con exito")
         } else {
             crearAlertaError("Verifica que todos los campos esten llenos")

@@ -29,9 +29,13 @@ class VCRegistro: NSViewController {
     @IBOutlet weak var imgRol: NSImageView!
     @IBOutlet weak var bgRol: NSTextField!
     @IBOutlet weak var btnActualizar: NSButton!
+    @IBOutlet weak var bgImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
         cmbxRol.selectItem(at: 3)
         cmbxRol.isHidden = hidden
         bgRol.isHidden = hidden
