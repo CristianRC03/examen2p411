@@ -18,10 +18,16 @@ class VCWelcomeAdmin: NSViewController {
     @IBOutlet weak var btnUsuarios: NSButton!
     @IBOutlet weak var btnComprador: NSButton!
     @IBOutlet weak var btnVendedor: NSButton!
+    @IBOutlet weak var bgImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
     }
     
+    @IBAction func update(_ sender: NSButton) {
+        viewDidLoad()
+    }
 }

@@ -829,7 +829,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-4s-x4w">
                                 <rect key="frame" x="0.0" y="0.0" width="570" height="614"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondo" id="O8U-jb-sAm"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="O8U-jb-sAm"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blt-Jh-ATO">
                                 <rect key="frame" x="142" y="35" width="285" height="541"/>
@@ -1143,6 +1143,7 @@
                     </view>
                     <connections>
                         <outlet property="bgId" destination="TFy-Kn-e1f" id="KZo-px-J62"/>
+                        <outlet property="bgImage" destination="n1l-4s-x4w" id="zhA-Ao-Xq3"/>
                         <outlet property="bgRol" destination="apj-pk-mNu" id="gqJ-8C-LPe"/>
                         <outlet property="btnActualizar" destination="vYk-dx-7cU" id="7ys-vs-f3J"/>
                         <outlet property="btnCrear" destination="sc0-Ap-tuv" id="cnz-jh-xRU"/>
@@ -1172,10 +1173,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRs-xe-wBg">
-                                <rect key="frame" x="-195" y="-45" width="722" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="425"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoazul" id="Iuj-gg-Sjp"/>
                             </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-fL-E2h">
+                                <rect key="frame" x="37" y="63" width="230" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="oRi-Kf-t4k">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.0078431372550000003" green="0.1019607843" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7S-r2-qj6">
                                 <rect key="frame" x="-266" y="462" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1644,6 +1654,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="GRs-xe-wBg" id="bz2-N0-J69"/>
                         <outlet property="btnCrear" destination="Epm-Q3-3ez" id="Nm2-Y8-OFU"/>
                         <outlet property="btnModificar" destination="IIN-pf-AjH" id="tFL-QB-4oI"/>
                         <outlet property="txtCategoria" destination="g8Z-tb-cDG" id="IHi-0U-GAf"/>
@@ -1657,7 +1668,7 @@
                 </viewController>
                 <customObject id="At7-b1-PEJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2603" y="-221"/>
+            <point key="canvasLocation" x="2603" y="-221.5"/>
         </scene>
         <!--Compra-->
         <scene sceneID="xgN-Gd-oMg">
@@ -1668,10 +1679,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-7N-G8x">
-                                <rect key="frame" x="-114" y="-22" width="679" height="508"/>
+                                <rect key="frame" x="-1" y="0.0" width="451" height="443"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoazul" id="PpK-vC-ny5"/>
                             </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHa-Xp-fnC">
+                                <rect key="frame" x="122" y="126" width="246" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="lNp-PH-29B">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.0078431372550000003" green="0.1019607843" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzG-1G-7dg">
                                 <rect key="frame" x="-115" y="454" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1795,6 +1815,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="EGi-7N-G8x" id="cJx-AP-eT0"/>
                         <outlet property="btnCrear" destination="wMg-UW-eSS" id="mJv-MB-nPV"/>
                         <outlet property="btnModificar" destination="fqm-Eq-uNb" id="hKI-iU-ZUh"/>
                         <outlet property="cmbProducto" destination="cUY-J5-p9k" id="yw3-u0-UHf"/>
@@ -1805,7 +1826,7 @@
                 </viewController>
                 <customObject id="EAG-GL-XMH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574" y="357"/>
+            <point key="canvasLocation" x="2574" y="356.5"/>
         </scene>
         <!--Venta-->
         <scene sceneID="tdT-qh-aqr">
@@ -1815,6 +1836,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="556"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-Ke-ota">
+                                <rect key="frame" x="0.0" y="-7" width="450" height="563"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoazul" id="DUh-Bq-lhQ"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWm-yh-FM1">
+                                <rect key="frame" x="110" y="89" width="252" height="386"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="IsE-OB-l21">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.0078431372550000003" green="0.1019607843" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DW7-8q-iUB">
                                 <rect key="frame" x="-115" y="567" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -2007,14 +2042,10 @@
                                     <action selector="btnCrearClicked:" target="tzw-b3-P24" id="mhU-23-Ctc"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-Ke-ota">
-                                <rect key="frame" x="-251" y="-7" width="820" height="607"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondoazul" id="DUh-Bq-lhQ"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="2r4-Ke-ota" id="6El-yK-6O5"/>
                         <outlet property="btnCrear" destination="cNE-s3-ZeS" id="zAv-3F-8Ng"/>
                         <outlet property="btnModificar" destination="53k-an-chU" id="qE3-Dh-FrS"/>
                         <outlet property="cmbCliente" destination="0Mu-lU-IXK" id="4PJ-lK-5LR"/>
@@ -2189,6 +2220,55 @@
             </objects>
             <point key="canvasLocation" x="1229" y="2507"/>
         </scene>
+        <!--Personalizar-->
+        <scene sceneID="1Q4-kF-yLo">
+            <objects>
+                <viewController id="j56-fx-bAS" customClass="VCPersonalizar" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Fif-wn-Fhq">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-MO-sMR">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="zSp-lJ-vAX"/>
+                            </imageView>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydj-Ic-WOM">
+                                <rect key="frame" x="19" y="258" width="99" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="3cb-fv-v8h">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="cmbChanged:" target="j56-fx-bAS" id="0W7-po-oQC"/>
+                                </connections>
+                            </comboBox>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdZ-6N-O2l">
+                                <rect key="frame" x="19" y="230" width="99" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="j5f-wa-2fX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="cmbImageChanged:" target="j56-fx-bAS" id="gVz-ot-7th"/>
+                                </connections>
+                            </comboBox>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="bgImage" destination="Q3N-MO-sMR" id="1f1-nK-VhT"/>
+                        <outlet property="cmbColores" destination="ydj-Ic-WOM" id="Uhi-4K-3ng"/>
+                        <outlet property="cmbImagenes" destination="cdZ-6N-O2l" id="7af-Xk-TQx"/>
+                    </connections>
+                </viewController>
+                <customObject id="boS-S1-uBF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="-401"/>
+        </scene>
         <!--Tabla Productos-->
         <scene sceneID="S89-0N-uQE">
             <objects>
@@ -2198,9 +2278,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-VI-em5">
-                                <rect key="frame" x="-287" y="-39" width="1036" height="441"/>
+                                <rect key="frame" x="0.0" y="0.0" width="749" height="363"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondomorado" id="dfe-sh-wkf"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondomorado" id="dfe-sh-wkf"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMy-3D-Lwc">
                                 <rect key="frame" x="-279" y="376" width="16" height="16"/>
@@ -2544,6 +2624,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="eOI-VI-em5" id="spm-OB-eZy"/>
                         <outlet property="btnEliminar" destination="3rq-sR-iM4" id="8j4-Vg-elb"/>
                         <outlet property="btnModificar" destination="Lvc-U4-gkL" id="pp0-9V-lga"/>
                         <outlet property="txtId" destination="dcC-5B-jJ9" id="ZL5-N6-fgW"/>
@@ -2568,7 +2649,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL1-sZ-zdN">
-                                <rect key="frame" x="-56" y="-111" width="475" height="522"/>
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="ptp-nq-WsD"/>
                             </imageView>
@@ -2650,6 +2731,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="nL1-sZ-zdN" id="cag-Cd-aWL"/>
                         <outlet property="btnAltaInventario" destination="dk1-KQ-qv7" id="SLW-JE-oLk"/>
                         <outlet property="btnAltaProducto" destination="P3M-tp-e7P" id="D2K-mT-cft"/>
                         <outlet property="btnConsultaInventario" destination="OSb-qg-BaD" id="tK7-l8-RRp"/>
@@ -2659,7 +2741,7 @@
                 </viewController>
                 <customObject id="DMu-uN-IpU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="443"/>
+            <point key="canvasLocation" x="1201.5" y="443"/>
         </scene>
         <!--Tabla Pedidos-->
         <scene sceneID="TZv-0U-E2Z">
@@ -2670,9 +2752,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltS-pg-0rx">
-                                <rect key="frame" x="0.0" y="-67" width="670" height="447"/>
+                                <rect key="frame" x="0.0" y="0.0" width="670" height="335"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondomorado" id="wHu-p7-0DK"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondomorado" id="wHu-p7-0DK"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1H5-Mr-t7V">
                                 <rect key="frame" x="25" y="273" width="451" height="60"/>
@@ -2894,6 +2976,9 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="bgImage" destination="ltS-pg-0rx" id="VWH-x6-zgk"/>
+                    </connections>
                 </viewController>
                 <customObject id="nps-UG-1qK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="h2q-ja-aaQ">
@@ -2913,9 +2998,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-4C-ZjQ">
-                                <rect key="frame" x="-287" y="0.0" width="1177" height="374"/>
+                                <rect key="frame" x="0.0" y="0.0" width="870" height="335"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondomorado" id="wEO-pT-PY4"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondomorado" id="wEO-pT-PY4"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-Y4-b6W">
                                 <rect key="frame" x="59" y="224" width="96" height="21"/>
@@ -3320,6 +3405,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="oj1-4C-ZjQ" id="Onk-6p-iQe"/>
                         <outlet property="btnEliminar" destination="wkF-VV-TuM" id="e8P-7A-Zyh"/>
                         <outlet property="btnModificar" destination="6jJ-Ag-cHO" id="4VC-kG-jfV"/>
                         <outlet property="txtId" destination="G9G-Y4-b6W" id="RKn-ad-9wg"/>
@@ -3344,7 +3430,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHJ-oK-cvg">
-                                <rect key="frame" x="-78" y="-111" width="483" height="509"/>
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="299"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="PHL-fY-oCW"/>
                             </imageView>
@@ -3423,9 +3509,35 @@
                                     <segue destination="Qzp-RX-C29" kind="modal" id="Rmc-Dc-bJk"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5u-XS-2WQ">
+                                <rect key="frame" x="85" y="127" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Personalizar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PKn-tv-Ffp">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" red="0.1478301726" green="0.22026474809999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="j56-fx-bAS" kind="modal" id="nKN-0N-1gj"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-xX-PWG">
+                                <rect key="frame" x="203" y="266" width="90" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Recargar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aie-v0-udR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" red="1" green="0.85376381769999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="contentTintColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="update:" target="SMK-JA-2Ju" id="L3E-yg-QbE"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="oHJ-oK-cvg" id="OMS-Ro-4I4"/>
                         <outlet property="btnAlta" destination="SKo-iE-aIm" id="aoi-EH-Uig"/>
                         <outlet property="btnConsulta" destination="dUU-JA-VNe" id="NAN-rP-Wim"/>
                         <outlet property="btnUsuarios" destination="pFd-rB-eiF" id="6v1-rQ-weB"/>
@@ -3435,7 +3547,7 @@
                 </viewController>
                 <customObject id="stc-Gb-pB5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1"/>
+            <point key="canvasLocation" x="1201.5" y="0.5"/>
         </scene>
         <!--Tabla Users-->
         <scene sceneID="nyU-Yz-8x5">
@@ -3446,9 +3558,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28j-Yu-Zsv">
-                                <rect key="frame" x="-225" y="-45" width="1235" height="398"/>
+                                <rect key="frame" x="0.0" y="0.0" width="996" height="335"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondomorado" id="kSt-yF-VVa"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondomorado" id="kSt-yF-VVa"/>
                             </imageView>
                             <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="2jn-SV-OyC">
                                 <rect key="frame" x="48" y="10" width="886" height="191"/>
@@ -3813,6 +3925,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="28j-Yu-Zsv" id="VLB-ZH-Cgv"/>
                         <outlet property="txtId" destination="2yQ-Vm-Voe" id="5rE-Ed-eqh"/>
                         <segue destination="3wH-x8-6O5" kind="modal" identifier="irFormUserAct" id="Eib-Gn-Q45"/>
                     </connections>
@@ -3824,23 +3937,23 @@
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="1201" y="-469"/>
+            <point key="canvasLocation" x="1201" y="-469.5"/>
         </scene>
         <!--Tabla Inventario-->
         <scene sceneID="wwj-q0-L8F">
             <objects>
                 <viewController id="Azk-6j-IOC" customClass="VCTablaInventario" customModule="examen2p411" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="fTG-Ig-tf6">
-                        <rect key="frame" x="0.0" y="0.0" width="749" height="335"/>
+                        <rect key="frame" x="0.0" y="0.0" width="749" height="318"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-zb-Oi8">
-                                <rect key="frame" x="-287" y="-67" width="1036" height="441"/>
+                                <rect key="frame" x="0.0" y="-17" width="749" height="335"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondomorado" id="buP-sD-L7Y"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondomorado" id="buP-sD-L7Y"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCo-yW-qy8">
-                                <rect key="frame" x="55" y="221" width="96" height="21"/>
+                                <rect key="frame" x="55" y="204" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="2Ni-ug-sxr">
                                     <font key="font" metaFont="system"/>
@@ -3849,7 +3962,7 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNK-00-EyJ">
-                                <rect key="frame" x="20" y="25" width="709" height="182"/>
+                                <rect key="frame" x="20" y="8" width="709" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" id="ejv-Sx-fNT">
                                     <rect key="frame" x="1" y="1" width="707" height="180"/>
@@ -4093,7 +4206,7 @@
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIP-bA-lce">
-                                <rect key="frame" x="531" y="214" width="82" height="32"/>
+                                <rect key="frame" x="531" y="197" width="82" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Eliminar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xZZ-nJ-Yxh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4105,7 +4218,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PQ0-4S-5WE">
-                                <rect key="frame" x="426" y="214" width="92" height="32"/>
+                                <rect key="frame" x="426" y="197" width="92" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Modificar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C6P-gk-p62">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4117,7 +4230,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-f6-NHX">
-                                <rect key="frame" x="88" y="275" width="451" height="60"/>
+                                <rect key="frame" x="88" y="258" width="451" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Inventario" id="pOt-wW-xLJ">
                                     <font key="font" metaFont="systemHeavy" size="51"/>
@@ -4126,7 +4239,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGL-pa-Wdp">
-                                <rect key="frame" x="27" y="221" width="16" height="16"/>
+                                <rect key="frame" x="27" y="204" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Id" id="4kl-ML-IfQ">
                                     <font key="font" metaFont="system"/>
@@ -4137,6 +4250,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="Qzv-zb-Oi8" id="01q-6G-ktf"/>
                         <outlet property="btnEliminar" destination="GIP-bA-lce" id="55M-1i-SK5"/>
                         <outlet property="btnModificar" destination="PQ0-4S-5WE" id="vsS-zc-DSk"/>
                         <outlet property="txtId" destination="RCo-yW-qy8" id="mZv-Bd-60E"/>
@@ -4150,7 +4264,7 @@
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="1785.5" y="443.5"/>
+            <point key="canvasLocation" x="1785.5" y="452"/>
         </scene>
         <!--Welcome Vendedor-->
         <scene sceneID="oc2-de-d3K">
@@ -4163,7 +4277,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBw-3D-ptr">
                                 <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondo" id="xsM-Ki-6a5"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="xsM-Ki-6a5"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XuX-0U-mqY">
                                 <rect key="frame" x="51" y="237" width="206" height="44"/>
@@ -4219,6 +4333,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="uBw-3D-ptr" id="E58-aK-ril"/>
                         <outlet property="btnAlta" destination="59J-EZ-0KH" id="fZ3-BO-Qd7"/>
                         <outlet property="btnConsulta" destination="ljY-Du-ziU" id="E5q-S8-qyd"/>
                         <outlet property="lblUsuario" destination="0KV-g3-hRI" id="TCj-YO-EJg"/>
@@ -4239,7 +4354,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSh-j0-FeO">
                                 <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondo" id="aWI-aT-tsY"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="aWI-aT-tsY"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ebz-8Z-ZBf">
                                 <rect key="frame" x="39" y="201" width="206" height="28"/>
@@ -4262,15 +4377,6 @@
                                     <segue destination="zag-t9-cjf" kind="modal" identifier="irPediTabla" id="zgV-Td-Ate"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFT-kf-sLM">
-                                <rect key="frame" x="94" y="44" width="96" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Actualizar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f6k-y2-hsv">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-8o-cqV">
                                 <rect key="frame" x="40" y="159" width="206" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -4292,7 +4398,7 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="btnActualizar" destination="CFT-kf-sLM" id="vpo-NY-j0D"/>
+                        <outlet property="bgImage" destination="nSh-j0-FeO" id="svl-Sc-Ia5"/>
                         <outlet property="btnConsulta" destination="AsB-4x-q8i" id="iYE-9X-OWw"/>
                         <outlet property="lblUsuario" destination="Ebz-8Z-ZBf" id="6j3-My-2ii"/>
                     </connections>
@@ -4312,7 +4418,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7A-1g-PZF">
                                 <rect key="frame" x="0.0" y="0.0" width="279" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="fondo" id="qy6-kc-3cD"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="fondo" id="qy6-kc-3cD"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-Rd-teW">
                                 <rect key="frame" x="39" y="201" width="206" height="28"/>
@@ -4368,6 +4474,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="bgImage" destination="H7A-1g-PZF" id="bcr-hP-fmz"/>
                         <outlet property="btnAlta" destination="Yc8-GV-iL4" id="S32-p8-mqA"/>
                         <outlet property="btnConsulta" destination="rEa-LM-a50" id="Kyl-UC-zOw"/>
                         <outlet property="lblUsuario" destination="qkZ-Rd-teW" id="KFt-zb-Nez"/>
@@ -4379,13 +4486,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VX7-Mg-BuO"/>
-        <segue reference="ou4-65-NYr"/>
-        <segue reference="ahb-N7-ADW"/>
+        <segue reference="Tm8-h4-Mtb"/>
+        <segue reference="daW-GB-cW0"/>
+        <segue reference="qda-VE-RrB"/>
         <segue reference="Drt-9v-Ape"/>
-        <segue reference="gpZ-RV-XhZ"/>
+        <segue reference="RYa-cF-fLO"/>
         <segue reference="MaF-1q-pmz"/>
-        <segue reference="JHP-Gb-tTk"/>
+        <segue reference="U1i-Mx-0xV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="570" height="576"/>

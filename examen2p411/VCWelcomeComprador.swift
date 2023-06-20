@@ -17,10 +17,13 @@ class VCWelcomeComprador: NSViewController {
     @IBOutlet weak var btnAltaInventario: NSButton!
     @IBOutlet weak var btnConsultaInventario: NSButton!
     @IBOutlet weak var btnConsultaProducto: NSButton!
+    @IBOutlet weak var bgImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {

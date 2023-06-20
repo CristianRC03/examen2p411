@@ -14,8 +14,8 @@
             filePath = "examen2p411/VCRegistro.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "btnCrearClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "examen2p411/VCRegistro.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "btnCrearClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "examen2p411/VCCompra.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -94,13 +94,13 @@
             filePath = "examen2p411/VCRegistro.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "btnActualizarClicked(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B9972746-29C2-4867-B152-77E43A85749A - 80d224b967631ea4"
+                  uuid = "B9972746-29C2-4867-B152-77E43A85749A - 80d224b96760e049"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -110,12 +110,12 @@
                   urlString = "file:///Users/cristianromero/Documents/Mac/examen2p411/examen2p411/VCRegistro.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "163">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "841">
                </Location>
                <Location
-                  uuid = "B9972746-29C2-4867-B152-77E43A85749A - 80d224b96760e120"
+                  uuid = "B9972746-29C2-4867-B152-77E43A85749A - 80d224b96760e06a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,8 +125,8 @@
                   urlString = "file:///Users/cristianromero/Documents/Mac/examen2p411/examen2p411/VCRegistro.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
                   offsetFromSymbolStart = "163">
                </Location>
             </Locations>

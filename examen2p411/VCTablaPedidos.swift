@@ -10,9 +10,13 @@ import Cocoa
 class VCTablaPedidos: NSViewController {
     @objc dynamic var pedidosUsuario: [Pedido] = []
     
+    @IBOutlet weak var bgImage: NSImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
     }
     
 }

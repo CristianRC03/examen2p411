@@ -19,6 +19,7 @@
 		AF8DBACB2A1329E800FB4AD5 /* Venta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACA2A1329E800FB4AD5 /* Venta.swift */; };
 		AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACC2A132E2F00FB4AD5 /* Pedido.swift */; };
 		AF8DBACF2A133B8700FB4AD5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */; };
+		AFCB9C8F2A40DC150079E756 /* VCPersonalizar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCB9C8E2A40DC150079E756 /* VCPersonalizar.swift */; };
 		AFD564362A19B80700972D51 /* exito.gif in Resources */ = {isa = PBXBuildFile; fileRef = AFD564352A19B80700972D51 /* exito.gif */; };
 		AFD564382A19F43700972D51 /* CompraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564372A19F43700972D51 /* CompraController.swift */; };
 		AFD5643A2A19F54000972D51 /* ProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD564392A19F54000972D51 /* ProductoController.swift */; };
@@ -54,6 +55,7 @@
 		AF8DBACA2A1329E800FB4AD5 /* Venta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venta.swift; sourceTree = "<group>"; };
 		AF8DBACC2A132E2F00FB4AD5 /* Pedido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
 		AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AFCB9C8E2A40DC150079E756 /* VCPersonalizar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPersonalizar.swift; sourceTree = "<group>"; };
 		AFD564352A19B80700972D51 /* exito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = exito.gif; path = ../../../../Downloads/exito.gif; sourceTree = "<group>"; };
 		AFD564372A19F43700972D51 /* CompraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraController.swift; sourceTree = "<group>"; };
 		AFD564392A19F54000972D51 /* ProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				AF8DBAB12A12D30100FB4AD5 /* AppDelegate.swift */,
+				AFCB9C8E2A40DC150079E756 /* VCPersonalizar.swift */,
 				AF8DBAB32A12D30100FB4AD5 /* ViewController.swift */,
 				AF8DBAC02A12D55800FB4AD5 /* User.swift */,
 				AF8DBACE2A133B8700FB4AD5 /* LoginController.swift */,
@@ -224,6 +227,7 @@
 				AF8DBAC32A12D6BD00FB4AD5 /* Producto.swift in Sources */,
 				F55719612A1AF17F00FEA86A /* VCProducto.swift in Sources */,
 				AF8DBACF2A133B8700FB4AD5 /* LoginController.swift in Sources */,
+				AFCB9C8F2A40DC150079E756 /* VCPersonalizar.swift in Sources */,
 				AFD5643E2A19FAC600972D51 /* PedidoController.swift in Sources */,
 				AF8DBACD2A132E2F00FB4AD5 /* Pedido.swift in Sources */,
 				AF8DBAB22A12D30100FB4AD5 /* AppDelegate.swift in Sources */,

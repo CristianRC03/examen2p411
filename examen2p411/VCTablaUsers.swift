@@ -11,9 +11,13 @@ class VCTablaUsers: NSViewController {
     @objc dynamic var loginController = LoginController.compartir
 
     @IBOutlet weak var txtId: NSTextField!
+    @IBOutlet weak var bgImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = VCPersonalizar.color.cgColor
+        bgImage.image = NSImage(named: VCPersonalizar.image)
     }
     
     @IBAction func textDidChange(_ sender: NSTextField) {
