@@ -3494,6 +3494,17 @@
                                     <segue destination="j56-fx-bAS" kind="modal" id="nKN-0N-1gj"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-xX-PWG">
+                                <rect key="frame" x="210" y="266" width="76" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aie-v0-udR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="update:" target="SMK-JA-2Ju" id="L3E-yg-QbE"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

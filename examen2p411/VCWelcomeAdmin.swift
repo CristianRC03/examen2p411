@@ -27,4 +27,7 @@ class VCWelcomeAdmin: NSViewController {
         bgImage.image = NSImage(named: VCPersonalizar.image)
     }
     
+    @IBAction func update(_ sender: NSButton) {
+        viewDidLoad()
+    }
 }
