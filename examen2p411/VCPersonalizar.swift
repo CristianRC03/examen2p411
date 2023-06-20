@@ -8,9 +8,9 @@
 import Cocoa
 
 class VCPersonalizar: NSViewController {
-    @objc dynamic var colores: [String] = ["Morado", "Rojo"]
-    @objc dynamic var imagenes: [String] = ["felipe", "person"]
-    @objc dynamic static var image: String = "felipe"
+    @objc dynamic var colores: [String] = ["Morado", "Rosa", "Verde", "Gris", "Cafe"]
+    @objc dynamic var imagenes: [String] = ["apple", "github", "linux", "swift", "xcode"]
+    @objc dynamic static var image: String = "apple"
     @objc dynamic static var color: NSColor = NSColor.purple
 
     @IBOutlet weak var bgImage: NSImageView!
@@ -33,11 +33,20 @@ class VCPersonalizar: NSViewController {
         case "Morado":
             VCPersonalizar.color = NSColor.purple
             break
-        case "Rojo":
-            VCPersonalizar.color = NSColor.red
+        case "Rosa":
+            VCPersonalizar.color = NSColor.systemPink
+            break
+        case "Verde":
+            VCPersonalizar.color = NSColor.green
+            break
+        case "Gris":
+            VCPersonalizar.color = NSColor.lightGray
+            break
+        case "Cafe":
+            VCPersonalizar.color = NSColor.brown
             break
         default:
-            VCPersonalizar.color = NSColor.black
+            VCPersonalizar.color = NSColor.white
             break
         }
         view.layer?.backgroundColor = VCPersonalizar.color.cgColor
